@@ -1,0 +1,237 @@
+/* Importing both local and web fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@font-face {
+  font-family: "CalSans-SemiBold";
+  src: url("../fonts/CalSans-SemiBold.woff2") format("woff2"), url("../fonts/CalSans-SemiBold.woff") format("woff"), url("../fonts/CalSans-SemiBold.ttf") format("truetype"), url("../fonts/CalSans-SemiBold.otf") format("opentype");
+}
+/* Our resets and defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "CalSans-SemiBold", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sectionHeader {
+  text-align: center;
+}
+
+p, span {
+  font-family: "DM Sans", sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 15vh;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+header #headerContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 4vh;
+}
+header #headerContent img {
+  width: 10%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header #headerContent form {
+  position: relative;
+}
+header #headerContent form img {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  width: 20px;
+}
+header #headerContent form input {
+  padding: 2.5vh;
+  border-radius: 2.5vh;
+  border: none;
+  outline-color: #8358ff;
+}
+header #headerContent form input::-moz-placeholder {
+  padding-left: 4vh;
+  font-size: 14px;
+}
+header #headerContent form input::placeholder {
+  padding-left: 4vh;
+  font-size: 14px;
+}
+header #headerContent nav ul {
+  display: flex;
+  gap: 5vh;
+}
+header #headerContent nav ul li #firstNavLink {
+  color: #8358ff;
+}
+header #headerContent nav ul li a {
+  transition: 0.2s ease-in-out;
+  color: #131740;
+}
+header #headerContent nav ul li a:hover {
+  color: #8358ff;
+}
+header #headerContent #headerButtons {
+  display: flex;
+  gap: 2vh;
+}
+header #headerContent #headerButtons li button {
+  cursor: pointer;
+  padding: 2vh;
+  width: 6.5vh;
+  background: white;
+  border-radius: 25px;
+  border: none;
+  transition: 0.1s ease-in-out;
+}
+header #headerContent #headerButtons li button:hover {
+  background-color: #8358ff;
+}
+
+header.scrolled {
+  background-color: rgba(243, 235, 235, 0.603);
+}
+
+main .background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70vh;
+  z-index: -1;
+}
+main #UpBanner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main #UpBanner #upBanner-Main {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 70vh;
+}
+main #UpBanner #upBanner-Main h1 {
+  font-size: 60px;
+  color: #131740;
+}
+main #UpBanner #upBanner-Main p {
+  font-size: 20px;
+  color: #5a5d79;
+}
+main #UpBanner #upBanner-Main ul {
+  display: flex;
+  gap: 3vh;
+}
+main #UpBanner #upBanner-Main ul li {
+  padding: 2vh;
+  width: 20vh;
+  border-radius: 20vh;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+main #UpBanner #upBanner-Main ul li:nth-child(1) {
+  background-color: #8358ff;
+}
+main #UpBanner #upBanner-Main ul li:nth-child(1) a {
+  color: white;
+}
+main #UpBanner #upBanner-Main ul li:nth-child(1):hover {
+  background-color: #7444ff;
+}
+main #UpBanner #upBanner-Main ul li:nth-child(2) {
+  background-color: #fff;
+  box-shadow: 8px 8px 16px #aaa, -8px -8px 16px #fff;
+}
+main #UpBanner #upBanner-Main ul li:nth-child(2) a {
+  color: #8358ff;
+}
+main #UpBanner #upBanner-Main ul li:nth-child(2):hover {
+  background-color: #7444ff;
+}
+main #UpBanner #upBanner-Main ul li:nth-child(2):hover a {
+  color: white;
+}
+main #HotBids {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+main #HotBids .sectionHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+main #HotBids .sectionHeader img {
+  width: 25px;
+}
+main #HotBids .hotBidsCards {
+  display: flex;
+  gap: 4vh;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  position: relative;
+  width: 100% !important;
+}
+main #HotBids .hotBidsCards .swiper-wrapper {
+  display: flex;
+  gap: 5vh;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 20% !important;
+  overflow: hidden;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard button {
+  background: none;
+  border: none;
+  color: #8358ff;
+  font-size: 14px;
+  cursor: pointer;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Bottom i {
+  padding-right: 1vh;
+}
+main #HotBids .hotBidsCards .BothSwiperArrows {
+  background-color: #F2F3F4;
+  color: #7E7E7E;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  border-radius: 6vh;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+main #HotBids .hotBidsCards .BothSwiperArrows:hover {
+  background-color: #3BB77E;
+  color: white;
+}
+main #HotBids .hotBidsCards .BothSwiperArrows::after {
+  content: "";
+}/*# sourceMappingURL=style.css.map */
