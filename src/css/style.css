@@ -22,6 +22,10 @@ a {
 
 .sectionHeader {
   text-align: center;
+  margin-top: 10vh;
+}
+.sectionHeader h1 {
+  font-size: 30px;
 }
 
 p, span {
@@ -234,4 +238,52 @@ main #HotBids .hotBidsCards .BothSwiperArrows:hover {
 }
 main #HotBids .hotBidsCards .BothSwiperArrows::after {
   content: "";
+}
+main #TopCollections {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5vh;
+  background-color: #fcfcfe;
+}
+main #TopCollections .sectionHeader span {
+  color: #8358ff;
+}
+main #TopCollections #topCollectionsCards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 4vh;
+}
+main #TopCollections #topCollectionsCards .topCollectionsCard {
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+  width: 45vh;
+  border: solid 2px #e9f0ed;
+  border-radius: 4vh;
+  background-color: #fff;
+  padding: 3vh 0;
+}
+main #TopCollections #topCollectionsCards .topCollectionsCard span {
+  transform: translateX(3.5vh);
+  background-color: #131740;
+  color: white;
+  border: solid 1px white;
+  border-radius: 10vh;
+  width: 3.5vh;
+  text-align: center;
+}
+main #TopCollections #goToRankings {
+  background-color: #8358ff;
+  padding: 2.5vh;
+  width: 30vh;
+  border-radius: 20vh;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+main #TopCollections #goToRankings:hover {
+  background-color: #7444ff;
 }/*# sourceMappingURL=style.css.map */
