@@ -20,16 +20,44 @@ a {
   text-decoration: none;
 }
 
+input {
+  font-family: "DM Sans", sans-serif;
+}
+
+section {
+  padding: 5vh;
+}
+
 .sectionHeader {
   text-align: center;
   margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
 }
 .sectionHeader h1 {
   font-size: 30px;
+  color: #131740;
+}
+.sectionHeader img {
+  width: 25px;
 }
 
-p, span {
+p,
+span {
   font-family: "DM Sans", sans-serif;
+}
+
+footer {
+  padding: 5vh;
+}
+footer a {
+  font-family: "DM Sans", sans-serif;
+  color: #5a5d79;
+}
+footer a:hover {
+  color: #8358ff;
 }
 
 header {
@@ -60,6 +88,7 @@ header #headerContent form img {
   width: 20px;
 }
 header #headerContent form input {
+  width: 35vh;
   padding: 2.5vh;
   border-radius: 2.5vh;
   border: none;
@@ -102,10 +131,12 @@ header #headerContent #headerButtons li button {
 }
 header #headerContent #headerButtons li button:hover {
   background-color: #8358ff;
+  color: white;
 }
 
 header.scrolled {
   background-color: rgba(243, 235, 235, 0.603);
+  z-index: 100;
 }
 
 main .background {
@@ -171,16 +202,8 @@ main #UpBanner #upBanner-Main ul li:nth-child(2):hover a {
 main #HotBids {
   display: flex;
   flex-direction: column;
-  gap: 4vh;
-}
-main #HotBids .sectionHeader {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1vh;
-}
-main #HotBids .sectionHeader img {
-  width: 25px;
+  gap: 4vh;
 }
 main #HotBids .hotBidsCards {
   display: flex;
@@ -192,12 +215,15 @@ main #HotBids .hotBidsCards {
 }
 main #HotBids .hotBidsCards .swiper-wrapper {
   display: flex;
-  gap: 5vh;
 }
 main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard {
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  padding: 3vh;
+  margin: 5vh;
+  border: solid 1px #e7e8ec;
+  border-radius: 5vh;
   width: 20% !important;
   overflow: hidden;
 }
@@ -286,4 +312,188 @@ main #TopCollections #goToRankings {
 }
 main #TopCollections #goToRankings:hover {
   background-color: #7444ff;
+}
+main #TrendingCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+}
+main #TrendingCategories #trendingCategories-Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25vh;
+}
+main #TrendingCategories #trendingCategories-Header ul {
+  display: flex;
+  gap: 3vh;
+}
+main #TrendingCategories #trendingCategories-Header ul li {
+  display: flex;
+  align-items: center;
+  padding: 1.5vh 2vh;
+  color: #5a5d79;
+  border: solid 1px #e7e8ec;
+  border-radius: 2vh;
+  font-size: 15px;
+}
+main #TrendingCategories #trendingCategories-Header ul li:nth-child(1) {
+  background-color: #e7e8ec;
+}
+main #TrendingCategories #trendingCategories-Cards {
+  display: flex;
+  justify-content: center;
+  gap: 6vh;
+  flex-wrap: wrap;
+}
+main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card {
+  border: solid 1px #e7e8ec;
+  border-radius: 2vh;
+  padding: 3vh;
+}
+main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a {
+  display: flex;
+  align-items: center;
+  gap: 0.5vh;
+}
+main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a img {
+  padding-bottom: 0.5vh;
+}
+main #CreateAndSellYourNFTs {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  background-color: #fcfcfe !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4vh;
+  width: 45vh;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow {
+  width: 8vh;
+  padding: 1.5vh;
+  border-radius: 5vh;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(1) {
+  background-color: #CDBCFF !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(2) {
+  background-color: #C4F2E3 !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(3) {
+  background-color: #cddffb !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(4) {
+  background-color: #ffd0d0 !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(1) {
+  background-color: #8358ff !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(2) {
+  background-color: #10B981 !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(3) {
+  background-color: #428AF8 !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(4) {
+  background-color: #ef4444 !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 7vh;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom p {
+  font-size: 20px;
+  width: 56%;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form {
+  position: relative;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form input {
+  padding: 2.5vh;
+  width: 75vh;
+  border-radius: 5vh;
+  outline-color: #8358ff;
+  border: solid 1px #e7e8ec;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form button {
+  position: absolute;
+  right: 2vh;
+  top: 1.2vh;
+  border: none;
+  background: #8358ff;
+  color: white;
+  padding: 1.5vh;
+  width: 15vh;
+  border-radius: 5vh;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 9vh;
+}
+footer #FooterTop {
+  display: flex;
+}
+footer #FooterTop #footerTop-Left {
+  display: flex;
+  flex-direction: column;
+}
+footer #FooterTop #footerTop-Left img {
+  width: 25%;
+}
+footer #FooterTop #footerTop-Left p {
+  width: 60%;
+}
+footer #FooterTop #footerTop-Left #socialLinks {
+  display: flex;
+  gap: 5vh;
+}
+footer #FooterTop #footerTop-Left #socialLinks li {
+  color: #bcbdc9;
+}
+footer #FooterTop #footerTop-Left #socialLinks li i {
+  font-size: 20px;
+}
+footer #FooterTop #footerTop-Right {
+  display: flex;
+  gap: 25vh;
+}
+footer #FooterTop #footerTop-Right .siteInfoLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+footer #FooterTop #footerTop-Right .siteInfoLinks .siteInfoLinks-Main {
+  display: flex;
+  flex-direction: column;
+}
+footer #FooterBottom {
+  display: flex;
+  justify-content: space-between;
+}
+footer #FooterBottom #footerBottomLinks {
+  display: flex;
+  gap: 5vh;
 }/*# sourceMappingURL=style.css.map */

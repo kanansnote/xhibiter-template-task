@@ -76,18 +76,8 @@ main {
     #HotBids {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 4vh;
-
-        .sectionHeader {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1vh;
-
-            img {
-                width: 25px;
-            }
-        }
 
         .hotBidsCards {
             display: flex;
@@ -99,12 +89,15 @@ main {
 
             .swiper-wrapper {
                 display: flex;
-                gap: 5vh;
 
                 .hotBidsCard {
                     display: flex;
                     flex-direction: column;
                     gap: 1vh;
+                    padding: 3vh;
+                    margin: 5vh;
+                    border: solid 1px #e7e8ec;
+                    border-radius: 5vh;
                     width: 20% !important;
                     overflow: hidden;
 
@@ -207,11 +200,179 @@ main {
             cursor: pointer;
             transition: 0.2s ease-in-out;
             color: white;
-    
+
             &:hover {
                 background-color: #7444ff;
             }
         }
     }
 
+    #TrendingCategories {
+        display: flex;
+        flex-direction: column;
+        gap: 7vh;
+
+        #trendingCategories-Header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 25vh;
+
+            ul {
+                display: flex;
+                gap: 3vh;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 1.5vh 2vh;
+                    color: #5a5d79;
+                    border: solid 1px #e7e8ec;
+                    border-radius: 2vh;
+                    font-size: 15px;
+
+                    &:nth-child(1) {
+                        background-color: #e7e8ec;
+                    }
+                }
+            }
+        }
+
+        #trendingCategories-Cards {
+            display: flex;
+            justify-content: center;
+            gap: 6vh;
+            flex-wrap: wrap;
+
+            .trendingCategories-Card {
+                border: solid 1px #e7e8ec;
+                border-radius: 2vh;
+                padding: 3vh;
+
+
+
+
+
+                .trendingCategories-TextBottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5vh;
+
+                        img {
+                            padding-bottom: 0.5vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #CreateAndSellYourNFTs {
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        background-color: #fcfcfe !important;
+
+        #createAndSellYourNFTs-Cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .createAndSellYourNFTs-Card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 4vh;
+                width: 45vh;
+
+                .createAndSellYourNFTs-ImageShadow {
+                    width: 8vh;
+                    padding: 1.5vh;
+                    border-radius: 5vh;
+
+                    &:nth-child(1) {
+                        background-color: #CDBCFF !important;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #C4F2E3 !important;
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #cddffb !important;
+                    }
+
+                    &:nth-child(4) {
+                        background-color: #ffd0d0 !important;
+                    }
+
+                    .createAndSellYourNFTs-Image {
+
+                        &:nth-child(1) {
+                            background-color: #8358ff !important;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #10B981 !important;
+                        }
+
+                        &:nth-child(3) {
+                            background-color: #428AF8 !important;
+                        }
+
+                        &:nth-child(4) {
+                            background-color: #ef4444 !important;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        #createAndSellYourNFTs-Bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 7vh;
+
+            p {
+                font-size: 20px;
+                width: 56%;
+            }
+
+            form {
+                position: relative;
+
+                input {
+                    padding: 2.5vh;
+                    width: 75vh;
+                    border-radius: 5vh;
+                    outline-color: #8358ff;
+                    border: solid 1px #e7e8ec;
+                }
+
+                button {
+                    position: absolute;
+                    right: 2vh;
+                    top: 1.2vh;
+                    border: none;
+                    background: #8358ff;
+                    color: white;
+                    padding: 1.5vh;
+                    width: 15vh;
+                    border-radius: 5vh;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

@@ -27,15 +27,49 @@ a {
     text-decoration: none;
 }
 
+input {
+    font-family: "DM Sans", sans-serif;
+}
+
+section {
+    padding: 5vh;
+}
+
 .sectionHeader {
     text-align: center;
     margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+
 
     h1 {
         font-size: 30px;
+        color: #131740;
+    }
+
+
+    img {
+        width: 25px;
     }
 }
 
-p, span {
+p,
+span {
     font-family: "DM Sans", sans-serif;
+}
+
+footer {
+    
+    padding: 5vh;
+
+    a {
+        font-family: "DM Sans", sans-serif;
+        color: #5a5d79;
+
+        &:hover {
+            color: #8358ff;
+        }
+    }
 }
