@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+
 <body>
     <header>
         <div id="headerContent">
@@ -19,10 +21,94 @@
             </form>
             <nav>
                 <ul>
-                    <li><a id="firstNavLink" href="#">Home</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Resources</a></li>
+                    <li>
+                        <div class="dropdown headerDropdown HomeDropdown">
+                            <a class="dropdownLinks FirstNavLinkSelected" href="index.html">Home</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#">Home 1</a>
+                                    <a href="#">Home 2</a>
+                                    <a href="#">Home 4</a>
+                                    <a href="#">Home 6</a>
+                                    <a href="#">NFT Game</a>
+                                    <a href="#">Crypto App</a>
+                                    <a href="#">ICO Landing</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#">Home 1 RTL</a>
+                                    <a href="#">Home 3</a>
+                                    <a href="#">Home 5</a>
+                                    <a href="#">Crypto Consultant</a>
+                                    <a href="#">DAO Platform</a>
+                                    <a href="#">Crypto Trading</a>
+                                    <a href="#">NFT Aggregator</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown PagesDropdown">
+                            <a class="dropdownLinks" href="#">Pages</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#">Maintenance</a>
+                                    <a href="#">Single Case Study</a>
+                                    <a href="#">Item Details</a>
+                                    <a id="CollectionsPageAvailable" href="collections.html">Collections</a>
+                                    <a href="#">Activity</a>
+                                    <a href="#">User</a>
+                                    <a href="#">About</a>
+                                    <a href="#">Wallet</a>
+                                    <a href="#">Page 404</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#">Case Studies</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Collections Wide</a>
+                                    <a href="#">Collection</a>
+                                    <a href="#">Rankings</a>
+                                    <a href="#">Edit Profile</a>
+                                    <a href="#">Contact</a>
+                                    <a href="#">Login</a>
+                                    <a href="#">Terms of Service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown ExploreDropdown">
+                            <a class="dropdownLinks" href="#">Explore</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/all-colored.svg" alt="">All NFTs</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/palette-colored.svg" alt="">Art</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/bear-colored.svg" alt="">Collectibles</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/text-colored.svg" alt="">Domain Names</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/note-colored.svg" alt="">Music</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/camera-blue.svg" alt="">Photography</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/ball-colored.svg" alt="">Sports</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/card-colored.svg" alt="">Trading Cards</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/wallet-colored.svg" alt="">Utility</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/camera-aqua.svg" alt="">Virtual Worlds</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown ResourcesDropdown">
+                            <a class="dropdownLinks" href="#">Resources</a>
+                            <div class="dropdownContent">
+                                <a href="#">Help Center</a>
+                                <a href="#">Platform Status</a>
+                                <a href="#">Partners</a>
+                                <a href="#">Blog</a>
+                                <a href="#">Single Post</a>
+                                <a href="#">Newsletter</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="#">Create</a></li>
                 </ul>
             </nav>
@@ -34,7 +120,7 @@
         </div>
     </header>
     <main>
-        <img class="background" src="./src/images/home/miscellaneous/background.jpg" alt="Site Background Image">
+        <img class="background" src="./src/images/for-all-pages/background.jpg" alt="Site Background Image">
         <section id="UpBanner">
             <div id="upBanner-Main">
                 <h1>Buy, sell and collect NFTs.</h1>
@@ -44,7 +130,10 @@
                     <li><a href="#">Explore</a></li>
                 </ul>
             </div>
-            <img src="./src/images/home/miscellaneous/upbanner-image.jpeg" alt="UpBanner Image">
+            <div id="upBannerImages">
+                <img class="up-down-animation" src="./src/images/home/upbanner/3D_elements.png" alt="3D Elements">
+                <img src="./src/images/home/upbanner/hero.jpg" alt="Hero Image">
+            </div>
         </section>
         <section id="HotBids">
             <div class="sectionHeader">
@@ -57,7 +146,7 @@
                         <img src="./src/images/home/hot-bids/item_1.jpg" alt="">
                         <div class="hotBidsCard-Top">
                             <a href="#">ETH Me Outside</a>
-                            <span>1.55 ETH</span>
+                            <span><img src="./src/images/home/hot-bids/eth.svg" alt="">1.55 ETH</span>
                         </div>
                         <div class="hotBidsCard-Center">
                             <span>Current Bid - </span>
@@ -72,7 +161,7 @@
                         <img src="./src/images/home/hot-bids/item_2.jpg" alt="">
                         <div class="hotBidsCard-Top">
                             <a href="#">Lazyone Panda</a>
-                            <span>2 ETH</span>
+                            <span><img src="./src/images/home/hot-bids/eth.svg" alt="">2 ETH</span>
                         </div>
                         <div class="hotBidsCard-Center">
                             <span>Current Bid - </span>
@@ -87,7 +176,7 @@
                         <img src="./src/images/home/hot-bids/item_3.jpg" alt="">
                         <div class="hotBidsCard-Top">
                             <a href="#">Splendid Girl</a>
-                            <span>5.1 ETH</span>
+                            <span><img src="./src/images/home/hot-bids/eth.svg" alt="">5.1 ETH</span>
                         </div>
                         <div class="hotBidsCard-Center">
                             <span>Current Bid - </span>
@@ -102,7 +191,7 @@
                         <img src="./src/images/home/hot-bids/item_4.jpg" alt="">
                         <div class="hotBidsCard-Top">
                             <a href="#">Amazing NFT art</a>
-                            <span>7 ETH</span>
+                            <span><img src="./src/images/home/hot-bids/eth.svg" alt="">7 ETH</span>
                         </div>
                         <div class="hotBidsCard-Center">
                             <span>Current Bid - </span>
@@ -117,7 +206,7 @@
                         <img src="./src/images/home/hot-bids/item_5.gif" alt="">
                         <div class="hotBidsCard-Top">
                             <a href="#">Portrait Gallery</a>
-                            <span>0.7 ETH</span>
+                            <span><img src="./src/images/home/hot-bids/eth.svg" alt="">0.7 ETH</span>
                         </div>
                         <div class="hotBidsCard-Center">
                             <span>Current Bid - </span>
@@ -131,8 +220,8 @@
                     <div class="hotBidsCard swiper-slide">
                         <img src="./src/images/home/hot-bids/item_6.jpg" alt="">
                         <div class="hotBidsCard-Top">
-                            <a href="#">Flourishing Cat #180</a>
-                            <span>3 ETH</span>
+                            <a href="#">Flourishing Cat</a>
+                            <span><img src="./src/images/home/hot-bids/eth.svg" alt="">3 ETH</span>
                         </div>
                         <div class="hotBidsCard-Center">
                             <span>Current Bid - </span>
@@ -154,7 +243,15 @@
         </section>
         <section id="TopCollections">
             <div class="sectionHeader">
-                <h1>Top collections over <span>Last 24 Hours</span></h1>
+                <h1>Top collections over</h1>
+                <div class="dropdown TopCollectionsDropdown">
+                    <button><h1>Last 24 Hours<i class="fas fa-angle-down"></i></h1></button>
+                    <div class="dropdownContent">
+                        <h2>Last 24 Hours</h2>
+                        <h2>Last 7 Days</h>
+                        <h2>Last 30 Days</h2>
+                    </div>
+                </div>
             </div>
             <div id="topCollectionsCards">
                 <div class="topCollectionsCard">
@@ -288,24 +385,24 @@
             </div>
             <a id="goToRankings" href="#">Go to Rankings</a>
         </section>
-        <section id="TrendingCategories">
+        <section class="TrendingCategories">
             <div class="sectionHeader">
                 <img src="./src/images/home/miscellaneous/high-voltage.png" alt="">
                 <h1>Trending Categories</h1>
             </div>
-            <div id="trendingCategories-Header">
+            <div class="trendingCategories-Header">
                 <ul>
                     <li>All</li>
                     <li><img src="./src/images/home/trending-categories/palette.svg" alt="">Art</li>
                     <li><img src="./src/images/home/trending-categories/ticket.svg" alt="">Collectibles</li>
                     <li><img src="./src/images/home/trending-categories/text.svg" alt="">Domain</li>
-                    <li><img src="./src/images/home/trending-categories/music.svg" alt="">Music</li>
+                    <li><img src="./src/images/home/trending-categories/note.svg" alt="">Music</li>
                     <li><img src="./src/images/home/trending-categories/camera.svg" alt="">Photography</li>
                     <li><img src="./src/images/home/trending-categories/web.svg" alt="">Virtual World</li>
                 </ul>
                 <div>Price: Low to High</div>
             </div>
-            <div id="trendingCategories-Cards">
+            <div class="trendingCategories-Cards">
                 <div class="trendingCategories-Card">
                     <img src="./src/images/home/trending-categories/item_1.jpg" alt="">
                     <span><i></i></span>
@@ -317,7 +414,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
@@ -331,7 +429,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
@@ -345,7 +444,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
@@ -359,7 +459,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
@@ -373,7 +474,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
@@ -387,7 +489,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
@@ -401,7 +504,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
@@ -415,7 +519,8 @@
                     <p> ETH</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
+                            History</a>
                     </div>
                 </div>
             </div>
@@ -432,7 +537,7 @@
                         </div>
                     </div>
                     <h3>1. Set up your wallet</h3>
-                    <p>Once you've set up your wallet of choice, 
+                    <p>Once you've set up your wallet of choice,
                         connect it to OpenSeaby clicking the NFT Marketplace in the top right corner.
                     </p>
                 </div>
@@ -443,7 +548,7 @@
                         </div>
                     </div>
                     <h3>2. Create Your Collection</h3>
-                    <p>Click Create and set up your collection. Add social links, a description, 
+                    <p>Click Create and set up your collection. Add social links, a description,
                         profile & banner images, and set a secondary sales fee.
                     </p>
                 </div>
@@ -454,7 +559,7 @@
                         </div>
                     </div>
                     <h3>3. Add Your NFTs</h3>
-                    <p>Upload your work (image, video, audio, or 3D art), 
+                    <p>Upload your work (image, video, audio, or 3D art),
                         add a title and description, and customize your NFTs with properties, stats.
                     </p>
                 </div>
@@ -465,13 +570,13 @@
                         </div>
                     </div>
                     <h3>4. List Them For Sale</h3>
-                    <p>Choose between auctions, fixed-price listings, and declining-price listings. 
+                    <p>Choose between auctions, fixed-price listings, and declining-price listings.
                         You choose how you want to sell your NFTs!
                     </p>
                 </div>
             </div>
             <div id="createAndSellYourNFTs-Bottom">
-                <p>Join our mailing list to stay in the loop with our newest feature releases, 
+                <p>Join our mailing list to stay in the loop with our newest feature releases,
                     NFT drops, and tips and tricks for navigating Xhibiter.
                 </p>
                 <form action="">
@@ -485,20 +590,20 @@
         <div id="FooterTop">
             <div id="footerTop-Left">
                 <img src="./src/images/for-all-pages/logo.png" alt="">
-                <p>Create, sell and collect truly rare digital artworks. 
+                <p>Create, sell and collect truly rare digital artworks.
                     Powered by blockchain technology.
                 </p>
                 <ul id="socialLinks">
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                    <li><i class="fa-brands fa-discord"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-tiktok"></i></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                 </ul>
             </div>
             <div id="footerTop-Right">
                 <div class="siteInfoLinks">
-                    <h3>Marketplace</h3>     
+                    <h3>Marketplace</h3>
                     <div class="siteInfoLinks-Main">
                         <a href="#">All NFTs</a>
                         <a href="#">Art</a>
@@ -530,7 +635,8 @@
             </div>
         </div>
         <div id="FooterBottom">
-            <p>© 2024 Kanan N. All rights reserved. Powered by <a href="https://xhibiter-reactjs.ibthemespro.com/">Xhibiter</a>.</p>
+            <p>© 2024 Kanan N. All rights reserved. Powered by <a
+                    href="https://xhibiter-reactjs.ibthemespro.com/">Xhibiter</a>.</p>
             <ul id="footerBottomLinks">
                 <li><a href="#">Terms and conditions</a></li>
                 <li><a href="#">Privacy policy</a></li>
@@ -540,4 +646,5 @@
     <script src="./src/js/script.js"></script>
 
 </body>
+
 </html>

@@ -12,6 +12,7 @@
   font-family: "CalSans-SemiBold", sans-serif;
 }
 
+/* Main Things */
 ul {
   list-style-type: none;
 }
@@ -66,6 +67,7 @@ header {
   height: 15vh;
   background-color: transparent;
   transition: background-color 0.3s ease;
+  z-index: 500;
 }
 header #headerContent {
   display: flex;
@@ -84,37 +86,113 @@ header #headerContent form {
 header #headerContent form img {
   position: absolute;
   top: 13px;
-  left: 12px;
+  left: 15px;
   width: 20px;
 }
 header #headerContent form input {
-  width: 35vh;
-  padding: 2.5vh;
+  width: 50vh;
+  padding: 2.5vh 7vh;
   border-radius: 2.5vh;
   border: none;
   outline-color: #8358ff;
 }
 header #headerContent form input::-moz-placeholder {
-  padding-left: 4vh;
-  font-size: 14px;
+  font-size: 16px;
 }
 header #headerContent form input::placeholder {
-  padding-left: 4vh;
-  font-size: 14px;
+  font-size: 16px;
 }
 header #headerContent nav ul {
   display: flex;
   gap: 5vh;
 }
-header #headerContent nav ul li #firstNavLink {
+header #headerContent nav ul li .FirstNavLinkAvailable {
+  color: #131740;
+}
+header #headerContent nav ul li .FirstNavLinkSelected {
   color: #8358ff;
 }
 header #headerContent nav ul li a {
   transition: 0.2s ease-in-out;
-  color: #131740;
+  color: #5a5d79;
 }
 header #headerContent nav ul li a:hover {
   color: #8358ff;
+}
+header #headerContent nav ul li .headerDropdown {
+  position: relative;
+}
+header #headerContent nav ul li .headerDropdown .dropdownLinks {
+  padding: 6vh 1vh 6vh 1vh;
+}
+header #headerContent nav ul li .headerDropdown .dropdownContent {
+  display: none;
+}
+header #headerContent nav ul li .headerDropdown .dropdownContent a {
+  color: #5a5d79;
+  transition: color 0.2s ease-in-out;
+}
+header #headerContent nav ul li .headerDropdown .dropdownContent a:hover {
+  color: #8358ff;
+}
+header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 #CollectionsPageAvailable {
+  color: #131740;
+}
+header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 #CollectionsPageSelected {
+  color: #8358ff;
+}
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5vh;
+  position: absolute;
+  top: 6.5vh;
+  left: -10vh;
+  background-color: white;
+  border-radius: 3vh;
+}
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent .dropdownContent1,
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent .dropdownContent2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vh;
+}
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent a:hover {
+  background-color: #e7e8ec;
+  border-radius: 2vh;
+}
+header #headerContent nav ul li .HomeDropdown:hover .dropdownContent {
+  width: 70vh;
+  height: 35vh;
+}
+header #headerContent nav ul li .PagesDropdown #CollectionsPage {
+  color: #131740;
+}
+header #headerContent nav ul li .PagesDropdown:hover .dropdownContent {
+  width: 70vh;
+  height: 45vh;
+}
+header #headerContent nav ul li .ExploreDropdown .dropdownContent a {
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+}
+header #headerContent nav ul li .ExploreDropdown .dropdownContent a img {
+  padding-bottom: 0.5vh;
+}
+header #headerContent nav ul li .ExploreDropdown:hover .dropdownContent {
+  width: 70vh;
+  height: 25vh;
+  padding-right: 7vh;
+}
+header #headerContent nav ul li .ResourcesDropdown:hover .dropdownContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 30vh;
+  padding: 2vh;
 }
 header #headerContent #headerButtons {
   display: flex;
@@ -139,6 +217,9 @@ header.scrolled {
   z-index: 100;
 }
 
+main {
+  /* index.html */
+}
 main .background {
   position: absolute;
   top: 0;
@@ -150,6 +231,7 @@ main #UpBanner {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 10vh;
 }
 main #UpBanner #upBanner-Main {
   display: flex;
@@ -160,6 +242,7 @@ main #UpBanner #upBanner-Main {
 main #UpBanner #upBanner-Main h1 {
   font-size: 60px;
   color: #131740;
+  width: 85vh;
 }
 main #UpBanner #upBanner-Main p {
   font-size: 20px;
@@ -199,11 +282,51 @@ main #UpBanner #upBanner-Main ul li:nth-child(2):hover {
 main #UpBanner #upBanner-Main ul li:nth-child(2):hover a {
   color: white;
 }
+main #UpBanner #upBannerImages img:nth-child(1) {
+  position: relative;
+  top: 4vh;
+  right: -7vh;
+  width: 90vh;
+  z-index: 1;
+}
+main #UpBanner #upBannerImages img:nth-child(2) {
+  position: absolute;
+  top: 35vh;
+  right: 17vh;
+  transform: rotate(10deg);
+  border-radius: 20vh;
+  width: 70vh;
+  z-index: -1;
+}
+main #UpBanner #upBannerImages .up-down-animation {
+  animation-name: up-down;
+  animation-duration: 7s;
+  /* Adjust duration for animation speed */
+  animation-iteration-count: infinite;
+  /* Loop animation forever */
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  /* Start at original position */
+  50% {
+    transform: translateY(-50px);
+  }
+  /* Move image down */
+  100% {
+    transform: translateY(0);
+  }
+  /* Move image back up (loop) */
+}
 main #HotBids {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4vh;
+}
+main #HotBids .sectionHeader img {
+  padding-bottom: 0.9vh;
 }
 main #HotBids .hotBidsCards {
   display: flex;
@@ -219,7 +342,7 @@ main #HotBids .hotBidsCards .swiper-wrapper {
 main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard {
   display: flex;
   flex-direction: column;
-  gap: 1vh;
+  gap: 2vh;
   padding: 3vh;
   margin: 5vh;
   border: solid 1px #e7e8ec;
@@ -239,6 +362,29 @@ main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Top {
   align-items: center;
   justify-content: space-between;
 }
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Top a {
+  margin-top: 0.5vh;
+  color: #131740;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Top a:hover {
+  color: #8358ff;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Top span {
+  display: flex;
+  align-items: center;
+  color: #10B981;
+  border: solid 1px #e7e8ec;
+  border-radius: 1vh;
+  padding: 2px 3px;
+  font-size: 15px;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Top span img {
+  width: 20px;
+  height: 18px;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Center {
+  margin-bottom: 1vh;
+}
 main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Bottom {
   display: flex;
   align-items: center;
@@ -246,6 +392,9 @@ main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Bottom {
 }
 main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Bottom i {
   padding-right: 1vh;
+}
+main #HotBids .hotBidsCards .swiper-wrapper .hotBidsCard .hotBidsCard-Bottom span {
+  color: #5a5d79;
 }
 main #HotBids .hotBidsCards .BothSwiperArrows {
   background-color: #F2F3F4;
@@ -272,8 +421,44 @@ main #TopCollections {
   gap: 5vh;
   background-color: #fcfcfe;
 }
-main #TopCollections .sectionHeader span {
+main #TopCollections .sectionHeader .TopCollectionsDropdown {
+  position: relative;
+  display: inline-block;
+}
+main #TopCollections .sectionHeader .TopCollectionsDropdown h1, main #TopCollections .sectionHeader .TopCollectionsDropdown h2 {
+  cursor: pointer;
+}
+main #TopCollections .sectionHeader .TopCollectionsDropdown h1 {
   color: #8358ff;
+}
+main #TopCollections .sectionHeader .TopCollectionsDropdown h1 i {
+  margin-left: 5px;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  top: 2px;
+}
+main #TopCollections .sectionHeader .TopCollectionsDropdown .dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 35vh;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+main #TopCollections .sectionHeader .TopCollectionsDropdown:hover .dropdownContent {
+  display: flex;
+  align-items: flex-start;
+  padding: 5vh 6vh;
+  flex-direction: column;
+  gap: 5vh;
+  position: absolute;
+  top: 6.5vh;
+  left: -1vh;
+  background-color: white;
+  border-radius: 3vh;
+}
+main #TopCollections .sectionHeader .TopCollectionsDropdown:hover .dropdownContent i {
+  transform: rotate(180deg);
 }
 main #TopCollections #topCollectionsCards {
   display: flex;
@@ -313,22 +498,23 @@ main #TopCollections #goToRankings {
 main #TopCollections #goToRankings:hover {
   background-color: #7444ff;
 }
-main #TrendingCategories {
+
+.TrendingCategories {
   display: flex;
   flex-direction: column;
   gap: 7vh;
 }
-main #TrendingCategories #trendingCategories-Header {
+.TrendingCategories .trendingCategories-Header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 25vh;
 }
-main #TrendingCategories #trendingCategories-Header ul {
+.TrendingCategories .trendingCategories-Header ul {
   display: flex;
   gap: 3vh;
 }
-main #TrendingCategories #trendingCategories-Header ul li {
+.TrendingCategories .trendingCategories-Header ul li {
   display: flex;
   align-items: center;
   padding: 1.5vh 2vh;
@@ -337,45 +523,46 @@ main #TrendingCategories #trendingCategories-Header ul li {
   border-radius: 2vh;
   font-size: 15px;
 }
-main #TrendingCategories #trendingCategories-Header ul li:nth-child(1) {
+.TrendingCategories .trendingCategories-Header ul li:nth-child(1) {
   background-color: #e7e8ec;
 }
-main #TrendingCategories #trendingCategories-Cards {
+.TrendingCategories .trendingCategories-Cards {
   display: flex;
   justify-content: center;
   gap: 6vh;
   flex-wrap: wrap;
 }
-main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card {
+.TrendingCategories .trendingCategories-Cards .trendingCategories-Card {
   border: solid 1px #e7e8ec;
   border-radius: 2vh;
   padding: 3vh;
 }
-main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom {
+.TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a {
+.TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a {
   display: flex;
   align-items: center;
   gap: 0.5vh;
 }
-main #TrendingCategories #trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a img {
+.TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a img {
   padding-bottom: 0.5vh;
 }
-main #CreateAndSellYourNFTs {
+
+#CreateAndSellYourNFTs {
   display: flex;
   flex-direction: column;
   gap: 10vh;
   background-color: #fcfcfe !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,36 +571,36 @@ main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-
   gap: 4vh;
   width: 45vh;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow {
   width: 8vh;
   padding: 1.5vh;
   border-radius: 5vh;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(1) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(1) {
   background-color: #CDBCFF !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(2) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(2) {
   background-color: #C4F2E3 !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(3) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(3) {
   background-color: #cddffb !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(4) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(4) {
   background-color: #ffd0d0 !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(1) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(1) {
   background-color: #8358ff !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(2) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(2) {
   background-color: #10B981 !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(3) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(3) {
   background-color: #428AF8 !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(4) {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(4) {
   background-color: #ef4444 !important;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -421,21 +608,21 @@ main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom {
   text-align: center;
   gap: 7vh;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom p {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom p {
   font-size: 20px;
   width: 56%;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form {
   position: relative;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form input {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form input {
   padding: 2.5vh;
   width: 75vh;
   border-radius: 5vh;
   outline-color: #8358ff;
   border: solid 1px #e7e8ec;
 }
-main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form button {
+#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form button {
   position: absolute;
   right: 2vh;
   top: 1.2vh;
@@ -446,6 +633,53 @@ main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form button {
   width: 15vh;
   border-radius: 5vh;
   cursor: pointer;
+}
+
+/* collections.html */
+.exploreCollections-Images {
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+}
+.exploreCollections-Images img {
+  border-radius: 2vh;
+}
+
+.exploreCollections-SmallImages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.65vh;
+}
+
+.exploreCollections-CardBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1vh;
+  margin-top: 2vh;
+}
+.exploreCollections-CardBottom .CardBottomLink {
+  color: #131740;
+}
+.exploreCollections-CardBottom .CardBottomLink:hover {
+  color: #8358ff;
+}
+
+.exploreCollections-CardBottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  position: relative;
+}
+.exploreCollections-CardBottomLeft p a {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+}
+.exploreCollections-CardBottomLeft span {
+  position: absolute;
+  right: 0;
+  color: #5a5d79;
+  font-weight: 600;
 }
 
 footer {
@@ -459,6 +693,8 @@ footer #FooterTop {
 footer #FooterTop #footerTop-Left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 5vh;
 }
 footer #FooterTop #footerTop-Left img {
   width: 25%;
@@ -470,11 +706,14 @@ footer #FooterTop #footerTop-Left #socialLinks {
   display: flex;
   gap: 5vh;
 }
-footer #FooterTop #footerTop-Left #socialLinks li {
-  color: #bcbdc9;
+footer #FooterTop #footerTop-Left #socialLinks li a {
+  color: #a1a2b3;
 }
-footer #FooterTop #footerTop-Left #socialLinks li i {
+footer #FooterTop #footerTop-Left #socialLinks li a i {
   font-size: 20px;
+}
+footer #FooterTop #footerTop-Left #socialLinks li a:hover {
+  color: #8358ff;
 }
 footer #FooterTop #footerTop-Right {
   display: flex;

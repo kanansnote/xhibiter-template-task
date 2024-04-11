@@ -1,4 +1,5 @@
 main {
+
     .background {
         position: absolute;
         top: 0;
@@ -7,10 +8,13 @@ main {
         z-index: -1;
     }
 
+    /* index.html */
+
     #UpBanner {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: 10vh;
 
         #upBanner-Main {
             display: flex;
@@ -21,6 +25,7 @@ main {
             h1 {
                 font-size: 60px;
                 color: #131740;
+                width: 85vh;
             }
 
             p {
@@ -71,6 +76,57 @@ main {
                 }
             }
         }
+
+        #upBannerImages {
+
+            img {
+
+                &:nth-child(1) {
+                    position: relative;
+                    top: 4vh;
+                    right: -7vh;
+                    width: 90vh;
+                    z-index: 1;
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 35vh;
+                    right: 17vh;
+                    transform: rotate(10deg);
+                    border-radius: 20vh;
+                    width: 70vh;
+                    z-index: -1;
+                }
+            }
+
+            .up-down-animation {
+                animation-name: up-down;
+                animation-duration: 7s;
+                /* Adjust duration for animation speed */
+                animation-iteration-count: infinite;
+                /* Loop animation forever */
+            }
+
+            @keyframes up-down {
+                0% {
+                    transform: translateY(0);
+                }
+
+                /* Start at original position */
+                50% {
+                    transform: translateY(-50px);
+                }
+
+                /* Move image down */
+                100% {
+                    transform: translateY(0);
+                }
+
+                /* Move image back up (loop) */
+            }
+
+        }
     }
 
     #HotBids {
@@ -78,6 +134,12 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 4vh;
+
+        .sectionHeader {
+            img {
+                padding-bottom: 0.9vh;
+            }
+        }
 
         .hotBidsCards {
             display: flex;
@@ -93,7 +155,7 @@ main {
                 .hotBidsCard {
                     display: flex;
                     flex-direction: column;
-                    gap: 1vh;
+                    gap: 2vh;
                     padding: 3vh;
                     margin: 5vh;
                     border: solid 1px #e7e8ec;
@@ -113,6 +175,34 @@ main {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+
+                        a {
+                            margin-top: 0.5vh;
+                            color: #131740;
+
+                            &:hover {
+                                color: #8358ff;
+                            }
+                        }
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            color: #10B981;
+                            border: solid 1px #e7e8ec;
+                            border-radius: 1vh;
+                            padding: 2px 3px;
+                            font-size: 15px;
+
+                            img {
+                                width: 20px;
+                                height: 18px;
+                            }
+                        }
+                    }
+
+                    .hotBidsCard-Center {
+                        margin-bottom: 1vh;
                     }
 
                     .hotBidsCard-Bottom {
@@ -122,6 +212,10 @@ main {
 
                         i {
                             padding-right: 1vh;
+                        }
+
+                        span {
+                            color: #5a5d79;
                         }
                     }
                 }
@@ -158,8 +252,54 @@ main {
         background-color: #fcfcfe;
 
         .sectionHeader {
-            span {
-                color: #8358ff;
+
+            .TopCollectionsDropdown {
+                position: relative;
+                display: inline-block;
+
+                h1, h2 {
+                    cursor: pointer;
+                }
+                
+                h1 {
+                    color: #8358ff;
+
+                    i {
+                        margin-left: 5px;
+                        transition: 0.2s ease-in-out;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+
+                .dropdownContent {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    width: 35vh;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                }
+
+                &:hover {
+                    .dropdownContent {
+                        display: flex;
+                        align-items: flex-start;
+                        padding: 5vh 6vh;
+                        flex-direction: column;
+                        gap: 5vh;
+                        position: absolute;
+                        top: 6.5vh;
+                        left: -1vh;
+                        background-color: white;
+                        border-radius: 3vh;
+                        
+                        i {
+                            transform: rotate(180deg);
+                        }
+                        
+                    }
+                }
             }
         }
 
@@ -206,173 +346,228 @@ main {
             }
         }
     }
+}
 
-    #TrendingCategories {
+.TrendingCategories {
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+
+    .trendingCategories-Header {
         display: flex;
-        flex-direction: column;
-        gap: 7vh;
+        justify-content: space-around;
+        align-items: center;
+        gap: 25vh;
 
-        #trendingCategories-Header {
+        ul {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 25vh;
+            gap: 3vh;
 
-            ul {
+            li {
                 display: flex;
-                gap: 3vh;
-
-                li {
-                    display: flex;
-                    align-items: center;
-                    padding: 1.5vh 2vh;
-                    color: #5a5d79;
-                    border: solid 1px #e7e8ec;
-                    border-radius: 2vh;
-                    font-size: 15px;
-
-                    &:nth-child(1) {
-                        background-color: #e7e8ec;
-                    }
-                }
-            }
-        }
-
-        #trendingCategories-Cards {
-            display: flex;
-            justify-content: center;
-            gap: 6vh;
-            flex-wrap: wrap;
-
-            .trendingCategories-Card {
+                align-items: center;
+                padding: 1.5vh 2vh;
+                color: #5a5d79;
                 border: solid 1px #e7e8ec;
                 border-radius: 2vh;
-                padding: 3vh;
+                font-size: 15px;
 
-
-
-
-
-                .trendingCategories-TextBottom {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    a {
-                        display: flex;
-                        align-items: center;
-                        gap: 0.5vh;
-
-                        img {
-                            padding-bottom: 0.5vh;
-                        }
-                    }
+                &:nth-child(1) {
+                    background-color: #e7e8ec;
                 }
             }
         }
     }
 
-    #CreateAndSellYourNFTs {
+    .trendingCategories-Cards {
         display: flex;
-        flex-direction: column;
-        gap: 10vh;
-        background-color: #fcfcfe !important;
+        justify-content: center;
+        gap: 6vh;
+        flex-wrap: wrap;
 
-        #createAndSellYourNFTs-Cards {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+        .trendingCategories-Card {
+            border: solid 1px #e7e8ec;
+            border-radius: 2vh;
+            padding: 3vh;
 
-            .createAndSellYourNFTs-Card {
+
+
+
+
+            .trendingCategories-TextBottom {
                 display: flex;
-                flex-direction: column;
+                justify-content: space-between;
                 align-items: center;
-                justify-content: center;
-                text-align: center;
-                gap: 4vh;
-                width: 45vh;
 
-                .createAndSellYourNFTs-ImageShadow {
-                    width: 8vh;
-                    padding: 1.5vh;
-                    border-radius: 5vh;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5vh;
+
+                    img {
+                        padding-bottom: 0.5vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#CreateAndSellYourNFTs {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    background-color: #fcfcfe !important;
+
+    #createAndSellYourNFTs-Cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .createAndSellYourNFTs-Card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 4vh;
+            width: 45vh;
+
+            .createAndSellYourNFTs-ImageShadow {
+                width: 8vh;
+                padding: 1.5vh;
+                border-radius: 5vh;
+
+                &:nth-child(1) {
+                    background-color: #CDBCFF !important;
+                }
+
+                &:nth-child(2) {
+                    background-color: #C4F2E3 !important;
+                }
+
+                &:nth-child(3) {
+                    background-color: #cddffb !important;
+                }
+
+                &:nth-child(4) {
+                    background-color: #ffd0d0 !important;
+                }
+
+                .createAndSellYourNFTs-Image {
 
                     &:nth-child(1) {
-                        background-color: #CDBCFF !important;
+                        background-color: #8358ff !important;
                     }
 
                     &:nth-child(2) {
-                        background-color: #C4F2E3 !important;
+                        background-color: #10B981 !important;
                     }
 
                     &:nth-child(3) {
-                        background-color: #cddffb !important;
+                        background-color: #428AF8 !important;
                     }
 
                     &:nth-child(4) {
-                        background-color: #ffd0d0 !important;
+                        background-color: #ef4444 !important;
                     }
 
-                    .createAndSellYourNFTs-Image {
-
-                        &:nth-child(1) {
-                            background-color: #8358ff !important;
-                        }
-
-                        &:nth-child(2) {
-                            background-color: #10B981 !important;
-                        }
-
-                        &:nth-child(3) {
-                            background-color: #428AF8 !important;
-                        }
-
-                        &:nth-child(4) {
-                            background-color: #ef4444 !important;
-                        }
-
-                    }
                 }
             }
         }
+    }
 
-        #createAndSellYourNFTs-Bottom {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            gap: 7vh;
+    #createAndSellYourNFTs-Bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 7vh;
 
-            p {
-                font-size: 20px;
-                width: 56%;
+        p {
+            font-size: 20px;
+            width: 56%;
+        }
+
+        form {
+            position: relative;
+
+            input {
+                padding: 2.5vh;
+                width: 75vh;
+                border-radius: 5vh;
+                outline-color: #8358ff;
+                border: solid 1px #e7e8ec;
             }
 
-            form {
-                position: relative;
-
-                input {
-                    padding: 2.5vh;
-                    width: 75vh;
-                    border-radius: 5vh;
-                    outline-color: #8358ff;
-                    border: solid 1px #e7e8ec;
-                }
-
-                button {
-                    position: absolute;
-                    right: 2vh;
-                    top: 1.2vh;
-                    border: none;
-                    background: #8358ff;
-                    color: white;
-                    padding: 1.5vh;
-                    width: 15vh;
-                    border-radius: 5vh;
-                    cursor: pointer;
-                }
+            button {
+                position: absolute;
+                right: 2vh;
+                top: 1.2vh;
+                border: none;
+                background: #8358ff;
+                color: white;
+                padding: 1.5vh;
+                width: 15vh;
+                border-radius: 5vh;
+                cursor: pointer;
             }
         }
+    }
+}
+
+/* collections.html */
+
+.exploreCollections-Images {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+
+    img {
+        border-radius: 2vh;
+    }
+}
+
+.exploreCollections-SmallImages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.65vh;
+}
+
+.exploreCollections-CardBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
+    margin-top: 2vh;
+
+    .CardBottomLink {
+        color: #131740;
+
+        &:hover {
+            color: #8358ff;
+        }
+    }
+}
+
+.exploreCollections-CardBottomLeft {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    position: relative;
+
+    p {
+        a {
+            font-family: "DM Sans", sans-serif;
+            font-weight: 600;
+        }
+    }
+
+    span {
+        position: absolute;
+        right: 0;
+        color: #5a5d79;
+        font-weight: 600;
     }
 }

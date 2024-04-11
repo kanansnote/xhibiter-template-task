@@ -4,6 +4,7 @@ header {
     height: 15vh;
     background-color: transparent;
     transition: background-color 0.3s ease;
+    z-index: 500;
 
     #headerContent {
         display: flex;
@@ -22,20 +23,19 @@ header {
             img {
                 position: absolute;
                 top: 13px;
-                left: 12px;
+                left: 15px;
                 width: 20px;
             }
 
             input {
-                width: 35vh;
-                padding: 2.5vh;
+                width: 50vh;
+                padding: 2.5vh 7vh;
                 border-radius: 2.5vh;
                 border: none;
                 outline-color: #8358ff;
 
                 &::placeholder {
-                    padding-left: 4vh;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
             }
         }
@@ -46,16 +46,143 @@ header {
                 gap: 5vh;
 
                 li {
-                    #firstNavLink {
+
+                    .FirstNavLinkAvailable {
+                        color: #131740;
+                    }
+
+                    .FirstNavLinkSelected {
                         color: #8358ff;
                     }
 
                     a {
                         transition: 0.2s ease-in-out;
-                        color: #131740;
+                        color: #5a5d79;
 
                         &:hover {
                             color: #8358ff;
+                        }
+                    }
+
+                    .headerDropdown {
+                        position: relative;
+
+                        .dropdownLinks {
+                            padding: 6vh 1vh 6vh 1vh;
+                        }
+
+                        .dropdownContent {
+                            display: none;
+
+                            a {
+                                color: #5a5d79;
+                                transition: color 0.2s ease-in-out;
+
+                                &:hover {
+                                    color: #8358ff;
+                                }
+                            }
+
+                            .dropdownContent1 {
+                                #CollectionsPageAvailable {
+                                    color: #131740; 
+                                }
+
+                                #CollectionsPageSelected {
+                                    color: #8358ff; 
+                                }      
+                            }
+                        }
+
+                        &:hover {
+
+                            .dropdownContent {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                gap: 5vh;
+                                position: absolute;
+                                top: 6.5vh;
+                                left: -10vh;
+                                background-color: white;
+                                border-radius: 3vh;
+
+                                .dropdownContent1,
+                                .dropdownContent2 {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    gap: 1vh;
+                                }
+
+                                a:hover {
+                                    background-color: #e7e8ec;
+                                    border-radius: 2vh;
+                                }
+                            }
+                        }
+                    }
+
+                    .HomeDropdown {
+
+                        &:hover {
+
+                            .dropdownContent {
+                                width: 70vh;
+                                height: 35vh;
+                            }
+                        }
+                    }
+
+                    .PagesDropdown {
+
+                        #CollectionsPage {
+                            color: #131740;
+                        }
+
+                        &:hover {
+
+                            .dropdownContent {
+                                width: 70vh;
+                                height: 45vh;
+                            }
+                        }
+                    }
+
+                    .ExploreDropdown {
+
+                        .dropdownContent {
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                gap: 2vh;
+
+                                img {
+                                    padding-bottom: 0.5vh;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .dropdownContent {
+                                width: 70vh;
+                                height: 25vh;
+                                padding-right: 7vh;
+                            }
+                        }
+                    }
+
+                    .ResourcesDropdown {
+
+                        &:hover {
+                            .dropdownContent {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 5vh;
+                                width: 30vh;
+                                padding: 2vh;
+                            }
                         }
                     }
                 }

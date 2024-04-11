@@ -21,10 +21,105 @@
             </form>
             <nav>
                 <ul>
-                    <li><a id="firstNavLink" href="#">Home</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Resources</a></li>
+                    <li>
+                        <div class="dropdown headerDropdown HomeDropdown">
+                            <a class="dropdownLinks FirstNavLinkAvailable" href="index.html">Home</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#">Home 1</a>
+                                    <a href="#">Home 2</a>
+                                    <a href="#">Home 4</a>
+                                    <a href="#">Home 6</a>
+                                    <a href="#">NFT Game</a>
+                                    <a href="#">Crypto App</a>
+                                    <a href="#">ICO Landing</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#">Home 1 RTL</a>
+                                    <a href="#">Home 3</a>
+                                    <a href="#">Home 5</a>
+                                    <a href="#">Crypto Consultant</a>
+                                    <a href="#">DAO Platform</a>
+                                    <a href="#">Crypto Trading</a>
+                                    <a href="#">NFT Aggregator</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown PagesDropdown">
+                            <a class="dropdownLinks" href="#">Pages</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#">Maintenance</a>
+                                    <a href="#">Single Case Study</a>
+                                    <a href="#">Item Details</a>
+                                    <a id="CollectionsPageSelected" href="collections.html">Collections</a>
+                                    <a href="#">Activity</a>
+                                    <a href="#">User</a>
+                                    <a href="#">About</a>
+                                    <a href="#">Wallet</a>
+                                    <a href="#">Page 404</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#">Case Studies</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Collections Wide</a>
+                                    <a href="#">Collection</a>
+                                    <a href="#">Rankings</a>
+                                    <a href="#">Edit Profile</a>
+                                    <a href="#">Contact</a>
+                                    <a href="#">Login</a>
+                                    <a href="#">Terms of Service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown ExploreDropdown">
+                            <a class="dropdownLinks" href="#">Explore</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/all-colored.svg"
+                                            alt="">All NFTs</a>
+                                    <a href="#"><img
+                                            src="./src/images/for-all-pages/header-dropdown/palette-colored.svg"
+                                            alt="">Art</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/bear-colored.svg"
+                                            alt="">Collectibles</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/text-colored.svg"
+                                            alt="">Domain Names</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/note-colored.svg"
+                                            alt="">Music</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/camera-blue.svg"
+                                            alt="">Photography</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/ball-colored.svg"
+                                            alt="">Sports</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/card-colored.svg"
+                                            alt="">Trading Cards</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/wallet-colored.svg"
+                                            alt="">Utility</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/camera-aqua.svg"
+                                            alt="">Virtual Worlds</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown ResourcesDropdown">
+                            <a class="dropdownLinks" href="#">Resources</a>
+                            <div class="dropdownContent">
+                                <a href="#">Help Center</a>
+                                <a href="#">Platform Status</a>
+                                <a href="#">Partners</a>
+                                <a href="#">Blog</a>
+                                <a href="#">Single Post</a>
+                                <a href="#">Newsletter</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="#">Create</a></li>
                 </ul>
             </nav>
@@ -36,157 +131,166 @@
         </div>
     </header>
     <main>
-        <section id="TrendingCategories">
+        <img class="background" src="./src/images/for-all-pages/background.jpg" alt="Gradient Background">
+        <section class="TrendingCategories ExploreCollections">
             <div class="sectionHeader">
                 <h1>Explore Collections</h1>
             </div>
-            <div id="trendingCategories-Header">
+            <div class="trendingCategories-Header exploreCollections-Header">
                 <ul>
                     <li>All</li>
                     <li><img src="./src/images/home/trending-categories/palette.svg" alt="">Art</li>
                     <li><img src="./src/images/home/trending-categories/ticket.svg" alt="">Collectibles</li>
                     <li><img src="./src/images/home/trending-categories/text.svg" alt="">Domain</li>
-                    <li><img src="./src/images/home/trending-categories/music.svg" alt="">Music</li>
+                    <li><img src="./src/images/home/trending-categories/note.svg" alt="">Music</li>
                     <li><img src="./src/images/home/trending-categories/camera.svg" alt="">Photography</li>
                     <li><img src="./src/images/home/trending-categories/web.svg" alt="">Virtual World</li>
                 </ul>
                 <div>Price: Low to High</div>
             </div>
-            <div id="trendingCategories-Cards">
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+            <div class="trendingCategories-Cards exploreCollections-Cards">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_1_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_1_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_1_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_1_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/17">Art Me Outside</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_1.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Wow Frens</a></p>
+                            <span>10K Items</span>
+                        </div>
                     </div>
                 </div>
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_2_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_2_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_2_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_2_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/18">PankySkal</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_2.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">NFT stars</a></p>
+                            <span>2.8K Items</span>
+                        </div>
                     </div>
                 </div>
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_3_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_3_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_3_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_3_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/19">VR Space_287</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_3.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Origin Morish</a></p>
+                            <span>8K Items</span>
+                        </div>
                     </div>
                 </div>
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_4_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_4_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_4_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_4_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/20">Metasmorf</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_4.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Lazy Panda</a></p>
+                            <span>1.5K Items</span>
+                        </div>
                     </div>
                 </div>
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_5_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_5_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_5_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_5_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/21">3Landers</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_5.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">051_Hart</a></p>
+                            <span>15K Items</span>
+                        </div>
                     </div>
                 </div>
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_6_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_6_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_6_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_6_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/22">SlimHoods</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_6.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Crytopank</a></p>
+                            <span>8.8K Items</span>
+                        </div>
                     </div>
                 </div>
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_7_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_7_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_7_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_7_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/23">The Overseers</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_7.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Mrsmeseks</a></p>
+                            <span>13K Items</span>
+                        </div>
                     </div>
                 </div>
-                <div class="trendingCategories-Card">
-                    <div class="trendingCategories-Images">
+                <div class="trendingCategories-Card exploreCollections-Card">
+                    <div class="exploreCollections-Images">
                         <img src="./src/images/collections/explore-collections/collection_8_1.jpg" alt="">
-                        <div class="trendingCategories-SmallImages">
+                        <div class="exploreCollections-SmallImages">
                             <img src="./src/images/collections/explore-collections/collection_8_2.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_8_3.jpg" alt="">
                             <img src="./src/images/collections/explore-collections/collection_8_4.jpg" alt="">
-                        </div>    
+                        </div>
                     </div>
-                    <a href=""></a>
-                    <span><i></i></span>
-                    <p> ETH</p>
-                    <div class="trendingCategories-TextBottom">
-                        <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View History</a>
+                    <div class="exploreCollections-CardBottom">
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/24">Dope Shibas</a>
+                        <div class="exploreCollections-CardBottomLeft">
+                            <img src="./src/images/collections/user-avatar/owner_8.png" alt="">
+                            <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">alyxbow</a></p>
+                            <span>3K Items</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,20 +300,20 @@
         <div id="FooterTop">
             <div id="footerTop-Left">
                 <img src="./src/images/for-all-pages/logo.png" alt="">
-                <p>Create, sell and collect truly rare digital artworks. 
+                <p>Create, sell and collect truly rare digital artworks.
                     Powered by blockchain technology.
                 </p>
                 <ul id="socialLinks">
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                    <li><i class="fa-brands fa-discord"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-tiktok"></i></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a title="socialLink" href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                 </ul>
             </div>
             <div id="footerTop-Right">
                 <div class="siteInfoLinks">
-                    <h3>Marketplace</h3>     
+                    <h3>Marketplace</h3>
                     <div class="siteInfoLinks-Main">
                         <a href="#">All NFTs</a>
                         <a href="#">Art</a>
@@ -241,7 +345,8 @@
             </div>
         </div>
         <div id="FooterBottom">
-            <p>© 2024 Kanan N. All rights reserved. Powered by <a href="https://xhibiter-reactjs.ibthemespro.com/">Xhibiter</a>.</p>
+            <p>© 2024 Kanan N. All rights reserved. Powered by <a
+                    href="https://xhibiter-reactjs.ibthemespro.com/">Xhibiter</a>.</p>
             <ul id="footerBottomLinks">
                 <li><a href="#">Terms and conditions</a></li>
                 <li><a href="#">Privacy policy</a></li>

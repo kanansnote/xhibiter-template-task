@@ -14,6 +14,9 @@ window.addEventListener('scroll', function () {
 });
 
 
+//
+
+
 // Slider for #featuredCategories section using swiper.js
 const swiper = new Swiper('.hotBidsCards', {
     slidesPerView: '4', // Adjust this value to control how many slides are visible at a time

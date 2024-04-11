@@ -9,6 +9,9 @@ footer {
         #footerTop-Left {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            gap: 5vh;
+
 
             img {
                 width: 25%;
@@ -23,10 +26,17 @@ footer {
                 gap: 5vh;
 
                 li {
-                    color: #bcbdc9;
 
-                    i {
-                        font-size: 20px;
+                    a {
+                        color: #a1a2b3;
+
+                        i {
+                            font-size: 20px;
+                        }
+
+                        &:hover {
+                            color: #8358ff;
+                        }
                     }
                 }
             }
