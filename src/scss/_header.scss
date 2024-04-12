@@ -12,9 +12,13 @@ header {
         align-items: center;
         padding-top: 4vh;
 
-        img {
-            width: 10%;
-            object-fit: contain;
+        a {
+            width: 25vh;
+            
+            #websiteLogo {
+                width: 25vh;
+                object-fit: contain;
+            }
         }
 
         form {
@@ -150,16 +154,19 @@ header {
                     }
 
                     .ExploreDropdown {
-
+                        
                         .dropdownContent {
-
+                            
                             a {
                                 display: flex;
                                 align-items: center;
                                 gap: 2vh;
+                                padding-left: 7vh;
+                                width: 30vh;
 
                                 img {
                                     padding-bottom: 0.5vh;
+                                    width: 15px;
                                 }
                             }
                         }

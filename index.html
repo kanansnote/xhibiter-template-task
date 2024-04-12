@@ -14,8 +14,7 @@
 <body>
     <header>
         <div id="headerContent">
-            <img src="./src/images/for-all-pages/logo.png" alt="Logo">
-            <form action="">
+            <a href="index.html"><img id="websiteLogo" src="./src/images/for-all-pages/logo.png" alt="Logo"></a>            <form action="">
                 <img src="./src/images/for-all-pages/search.svg" alt="Search Icon">
                 <input type="text" placeholder="Search">
             </form>
@@ -244,14 +243,14 @@
         <section id="TopCollections">
             <div class="sectionHeader">
                 <h1>Top collections over</h1>
-                <div class="dropdown TopCollectionsDropdown">
-                    <button><h1>Last 24 Hours<i class="fas fa-angle-down"></i></h1></button>
-                    <div class="dropdownContent">
-                        <h2>Last 24 Hours</h2>
-                        <h2>Last 7 Days</h>
-                        <h2>Last 30 Days</h2>
-                    </div>
-                </div>
+                <form id="topCollectionsForm" action="">
+                    <select title="dropdown" id="topCollectionsDropdown">
+                        <option value="">Last 24 Hours</option>
+                        <option id="optionDropdown" value="">Last 7 Days</option>
+                        <option value="">Last 30 Days</option>
+                    </select>
+                    <i class="fas fa-angle-down"></i>
+                </form>
             </div>
             <div id="topCollectionsCards">
                 <div class="topCollectionsCard">
@@ -400,127 +399,148 @@
                     <li><img src="./src/images/home/trending-categories/camera.svg" alt="">Photography</li>
                     <li><img src="./src/images/home/trending-categories/web.svg" alt="">Virtual World</li>
                 </ul>
-                <div>Price: Low to High</div>
+                <form action="">
+                    <select title="Select Options">
+                        <option value="">Price: Low to High</option>
+                        <option value="">Price: High to Low</option>
+                    </select>
+                </form>
             </div>
             <div class="trendingCategories-Cards">
                 <div class="trendingCategories-Card">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>160</span>
+                    </div>
                     <img src="./src/images/home/trending-categories/item_1.jpg" alt="">
-                    <span><i></i></span>
                     <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img title="Creator 1" src="./src/images/home/trending-categories/small-images/creator_1.png" alt="">
+                        <img title="Owner 1" src="./src/images/home/trending-categories/small-images/owner_1.png" alt="">
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">SwagFox#133</a>
+                    <p>0.078 ETH - 1/3</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>55</span>
+                    </div>
                     <img src="./src/images/home/trending-categories/item_2.jpg" alt="">
-                    <span><i></i></span>
                     <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img title="Creator 2" src="./src/images/home/trending-categories/small-images/creator_2.png" alt="">
+                        <img title="Owner 2" src="./src/images/home/trending-categories/small-images/owner_2.png" alt="">
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">Artof Eve</a>
+                    <p>0.13 ETH - 1/1</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>25</span>
+                    </div>
                     <img src="./src/images/home/trending-categories/item_3.jpg" alt="">
-                    <span><i></i></span>
                     <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img title="Creator 3" src="./src/images/home/trending-categories/small-images/creator_3.png" alt="">
+                        <img title="Owner 3" src="./src/images/home/trending-categories/small-images/owner_3.png" alt="">
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">Jedidia#149</a>
+                    <p>0.16 ETH - 1/1</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>70</span>
+                    </div>
                     <img src="./src/images/home/trending-categories/item_4.gif" alt="">
-                    <span><i></i></span>
                     <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img title="Creator 4" src="./src/images/home/trending-categories/small-images/creator_4.png" alt="">
+                        <img title="Owner 4" src="./src/images/home/trending-categories/small-images/owner_4.png" alt="">
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">Asuna #1649</a>
+                    <p>0.8 ETH - 1/1</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>32</span>
+                    </div>
                     <img src="./src/images/home/trending-categories/item_5.jpg" alt="">
-                    <span><i></i></span>
                     <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img title="Creator 5" src="./src/images/home/trending-categories/small-images/creator_5.png" alt="">
+                        <img title="Owner 5" src="./src/images/home/trending-categories/small-images/owner_5.png" alt="">
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">Monkeyme#155</a>
+                    <p>5 ETH - 1/1</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>188</span>
+                    </div>
                     <img src="./src/images/home/trending-categories/item_6.jpg" alt="">
-                    <span><i></i></span>
                     <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img title="Creator 6" src="./src/images/home/trending-categories/small-images/creator_6.png" alt="">
+                        <img title="Owner 6" src="./src/images/home/trending-categories/small-images/owner_6.png" alt="">
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">Amazing NFT art</a>
+                    <p>5.9 ETH - 1/7</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>15</span>
+                    </div>
                     <img src="./src/images/home/trending-categories/item_7.jpg" alt="">
-                    <span><i></i></span>
                     <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img title="Creator 7" src="./src/images/home/trending-categories/small-images/creator_7.png" alt="">
+                        <img title="Owner 7" src="./src/images/home/trending-categories/small-images/owner_7.png" alt="">
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">Flourishing Cat #180</a>
+                    <p>8.49 ETH - 2/8</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
                 <div class="trendingCategories-Card">
-                    <img src="./src/images/home/trending-categories/item_8.jpg" alt="">
-                    <span><i></i></span>
-                    <div class="trendingCategories-SmallImages">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                    <div class="trendingCategories-Favorites">
+                        <i title="Favorites" class="fa-regular fa-heart"></i>
+                        <span>159</span>
                     </div>
-                    <a href=""></a>
-                    <p> ETH</p>
+                    <img src="./src/images/home/trending-categories/item_8.jpg" alt="">
+                    <div class="trendingCategories-SmallImages">
+                        <img title="Creator 8" src="./src/images/home/trending-categories/small-images/creator_8.png" alt="">
+                        <img title="Owner 8" src="./src/images/home/trending-categories/small-images/owner_8.png" alt="">
+                    </div>
+                    <a href="https://xhibiter-reactjs.ibthemespro.com/item/8">Splendid Girl</a>
+                    <p>10 ETH - 2/3</p>
                     <div class="trendingCategories-TextBottom">
                         <button>Buy Now</button>
-                        <a href=""><img src="./src/images/home/trending-categories/view-history.svg" alt="">View
-                            History</a>
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>View History</a>
                     </div>
                 </div>
             </div>
@@ -531,8 +551,8 @@
             </div>
             <div id="createAndSellYourNFTs-Cards">
                 <div class="createAndSellYourNFTs-Card">
-                    <div class="createAndSellYourNFTs-ImageShadow">
-                        <div class="createAndSellYourNFTs-Image">
+                    <div class="createAndSellYourNFTs-ImageShadow NFTImageShadow1">
+                        <div class="createAndSellYourNFTs-Image NFTImage1">
                             <img src="./src/images/home/create-and-sell/img1.svg" alt="">
                         </div>
                     </div>
@@ -542,8 +562,8 @@
                     </p>
                 </div>
                 <div class="createAndSellYourNFTs-Card">
-                    <div class="createAndSellYourNFTs-ImageShadow">
-                        <div class="createAndSellYourNFTs-Image">
+                    <div class="createAndSellYourNFTs-ImageShadow NFTImageShadow2">
+                        <div class="createAndSellYourNFTs-Image NFTImage2">
                             <img src="./src/images/home/create-and-sell/img2.svg" alt="">
                         </div>
                     </div>
@@ -553,8 +573,8 @@
                     </p>
                 </div>
                 <div class="createAndSellYourNFTs-Card">
-                    <div class="createAndSellYourNFTs-ImageShadow">
-                        <div class="createAndSellYourNFTs-Image">
+                    <div class="createAndSellYourNFTs-ImageShadow NFTImageShadow3">
+                        <div class="createAndSellYourNFTs-Image NFTImage3">
                             <img src="./src/images/home/create-and-sell/img3.svg" alt="">
                         </div>
                     </div>
@@ -564,8 +584,8 @@
                     </p>
                 </div>
                 <div class="createAndSellYourNFTs-Card">
-                    <div class="createAndSellYourNFTs-ImageShadow">
-                        <div class="createAndSellYourNFTs-Image">
+                    <div class="createAndSellYourNFTs-ImageShadow NFTImageShadow4">
+                        <div class="createAndSellYourNFTs-Image NFTImage4">
                             <img src="./src/images/home/create-and-sell/img4.svg" alt="">
                         </div>
                     </div>
@@ -644,7 +664,6 @@
         </div>
     </footer>
     <script src="./src/js/script.js"></script>
-
 </body>
 
 </html>

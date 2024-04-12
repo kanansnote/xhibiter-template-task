@@ -230,10 +230,10 @@ main {
                 border-radius: 6vh;
                 border: none;
                 cursor: pointer;
-                transition: transform 0.5s ease-in-out;
+                transition: 0.2s ease-in-out;
 
                 &:hover {
-                    background-color: #3BB77E;
+                    background-color: #8358ff;
                     color: white;
                 }
 
@@ -253,51 +253,32 @@ main {
 
         .sectionHeader {
 
-            .TopCollectionsDropdown {
+            #topCollectionsForm {
                 position: relative;
-                display: inline-block;
 
-                h1, h2 {
-                    cursor: pointer;
-                }
-                
-                h1 {
-                    color: #8358ff;
-
-                    i {
-                        margin-left: 5px;
-                        transition: 0.2s ease-in-out;
-                        position: relative;
-                        top: 2px;
-                    }
-                }
-
-                .dropdownContent {
-                    display: none;
+                i {
                     position: absolute;
-                    background-color: #f1f1f1;
-                    width: 35vh;
-                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                    z-index: 1;
+                    right: 0;
+                    top: 0;
+                    color: #8358ff;
+                    font-size: 27px;
                 }
 
-                &:hover {
-                    .dropdownContent {
-                        display: flex;
-                        align-items: flex-start;
-                        padding: 5vh 6vh;
-                        flex-direction: column;
-                        gap: 5vh;
-                        position: absolute;
-                        top: 6.5vh;
-                        left: -1vh;
-                        background-color: white;
-                        border-radius: 3vh;
-                        
-                        i {
-                            transform: rotate(180deg);
-                        }
-                        
+                #topCollectionsDropdown {
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    appearance: none;
+                    width: 30vh;
+                    font-size: 27px;
+                    color: #8358ff;
+                    padding-top: 1px;
+
+                    option {
+                        font-size: 16px;
+                        color: #131740;
+                        padding-left: 5vh !important;
                     }
                 }
             }
@@ -318,6 +299,14 @@ main {
                 border-radius: 4vh;
                 background-color: #fff;
                 padding: 3vh 0;
+
+                a {
+                    color: #131740;
+
+                    &:hover {
+                        color: #8358ff;
+                    }
+                }
 
                 span {
                     transform: translateX(3.5vh);
@@ -346,228 +335,341 @@ main {
             }
         }
     }
-}
 
-.TrendingCategories {
-    display: flex;
-    flex-direction: column;
-    gap: 7vh;
-
-    .trendingCategories-Header {
+    .TrendingCategories {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 25vh;
+        flex-direction: column;
+        gap: 7vh;
 
-        ul {
+        .trendingCategories-Header {
             display: flex;
-            gap: 3vh;
+            justify-content: space-around;
+            align-items: center;
+            gap: 25vh;
 
-            li {
+            ul {
                 display: flex;
-                align-items: center;
-                padding: 1.5vh 2vh;
-                color: #5a5d79;
-                border: solid 1px #e7e8ec;
-                border-radius: 2vh;
-                font-size: 15px;
+                gap: 3vh;
 
-                &:nth-child(1) {
-                    background-color: #e7e8ec;
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 1.5vh 2vh;
+                    color: #5a5d79;
+                    border: solid 1px #e7e8ec;
+                    border-radius: 2vh;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        background-color: #8358ff;
+                        color: white;
+
+                        img {
+                            fill: white;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        background-color: #e7e8ec;
+
+                        &:hover {
+                            color: white;
+                            background-color: #8358ff;
+                        }
+                    }
+                }
+            }
+
+            form {
+                border: solid 1px #e7e8ec;
+                padding: 1.5vh;
+                border-radius: 1vh;
+
+                select {
+                    background-color: none;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
                 }
             }
         }
-    }
 
-    .trendingCategories-Cards {
-        display: flex;
-        justify-content: center;
-        gap: 6vh;
-        flex-wrap: wrap;
+        .trendingCategories-Cards {
+            display: flex;
+            justify-content: center;
+            gap: 6vh;
+            flex-wrap: wrap;
 
-        .trendingCategories-Card {
-            border: solid 1px #e7e8ec;
-            border-radius: 2vh;
-            padding: 3vh;
-
-
-
-
-
-            .trendingCategories-TextBottom {
+            .trendingCategories-Card {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                flex-direction: column;
+                gap: 2vh;
+                border: solid 1px #e7e8ec;
+                border-radius: 2vh;
+                padding: 3vh;
+                position: relative;
 
-                a {
+                .trendingCategories-Favorites {
                     display: flex;
                     align-items: center;
                     gap: 0.5vh;
+                    position: absolute;
+                    right: 5vh;
+                    top: 5vh;
+                    padding: 1vh 2vh;
+                    border-radius: 1vh;
+                    background-color: white;
+                    color: #5a5d79;
+
+                    i {
+                        padding-bottom: 1px;
+                        cursor: pointer;
+                    }
+                }
+
+                img {
+                    border-radius: 1.5vh;
+                    transition: 0.15s ease-in-out;
+                }
+
+                a {
+                    margin-top: 2vh;
+                    color: #131740;
+
+                    &:hover {
+                        color: #8358ff;
+                    }
+                }
+
+                .trendingCategories-SmallImages {
+                    display: flex;
+                    position: absolute;
+                    top: 38.5vh;
+                    left: 5vh;
+                    cursor: pointer;
 
                     img {
-                        padding-bottom: 0.5vh;
+                        border: solid 2px white;
+                        border-radius: 4vh;
+
+                        &:hover {
+                            border: solid 2px #8358ff;
+                        }
+
+                        &:nth-child(2) {
+                            position: absolute;
+                            left: 2.5vh;
+                        }
+                    }
+                }
+
+                .trendingCategories-TextBottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5vh;
+                        color: #5a5d79;
+                        margin-top: 0;
+
+                        i {
+                            padding-bottom: 0.5vh;
+                        }
+
+                        &:hover {
+                            color: #8358ff;
+                        }
+                    }
+
+                    button {
+                        background: none;
+                        border: none;
+                        color: #8358ff;
+                        cursor: pointer;
                     }
                 }
             }
         }
     }
-}
 
-#CreateAndSellYourNFTs {
-    display: flex;
-    flex-direction: column;
-    gap: 10vh;
-    background-color: #fcfcfe !important;
-
-    #createAndSellYourNFTs-Cards {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        .createAndSellYourNFTs-Card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 4vh;
-            width: 45vh;
-
-            .createAndSellYourNFTs-ImageShadow {
-                width: 8vh;
-                padding: 1.5vh;
-                border-radius: 5vh;
-
-                &:nth-child(1) {
-                    background-color: #CDBCFF !important;
-                }
-
-                &:nth-child(2) {
-                    background-color: #C4F2E3 !important;
-                }
-
-                &:nth-child(3) {
-                    background-color: #cddffb !important;
-                }
-
-                &:nth-child(4) {
-                    background-color: #ffd0d0 !important;
-                }
-
-                .createAndSellYourNFTs-Image {
-
-                    &:nth-child(1) {
-                        background-color: #8358ff !important;
-                    }
-
-                    &:nth-child(2) {
-                        background-color: #10B981 !important;
-                    }
-
-                    &:nth-child(3) {
-                        background-color: #428AF8 !important;
-                    }
-
-                    &:nth-child(4) {
-                        background-color: #ef4444 !important;
-                    }
-
-                }
-            }
-        }
-    }
-
-    #createAndSellYourNFTs-Bottom {
+    #CreateAndSellYourNFTs {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 7vh;
+        gap: 10vh;
+        background-color: #fcfcfe !important;
 
-        p {
-            font-size: 20px;
-            width: 56%;
+        #createAndSellYourNFTs-Cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .createAndSellYourNFTs-Card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 4vh;
+                width: 45vh;
+
+                .createAndSellYourNFTs-ImageShadow {
+                    width: 10vh;
+                    padding: 2.5vh 6vh;
+                    border-radius: 8vh;
+
+                    .createAndSellYourNFTs-Image {
+                        border-radius: 5vh;
+                        width: 7vh;
+                        height: 7vh;
+                        position: relative;
+                        right: 3.4vh;
+
+                        img {
+                            position: absolute;
+                            right: 1.5vh;
+                            top: 1.5vh;
+                        }
+                    }
+                }
+
+                .NFTImageShadow1 {
+                    background-color: #CDBCFF !important;
+
+                    .NFTImage1 {
+                        background-color: #8358ff !important;
+                    }
+                }
+
+                .NFTImageShadow2 {
+                    background-color: #C4F2E3 !important;
+
+                    .NFTImage2 {
+                        background-color: #10B981 !important;
+                    }
+                }
+
+                .NFTImageShadow3 {
+                    background-color: #cddffb !important;
+
+                    .NFTImage3 {
+                        background-color: #428AF8 !important;
+                    }
+                }
+
+                .NFTImageShadow4 {
+                    background-color: #ffd0d0 !important;
+
+                    .NFTImage4 {
+                        background-color: #ef4444 !important;
+                    }
+                }
+
+            }
         }
 
-        form {
+        #createAndSellYourNFTs-Bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 7vh;
+
+            p {
+                font-size: 20px;
+                width: 56%;
+            }
+
+            form {
+                position: relative;
+
+                input {
+                    padding: 2.5vh;
+                    width: 75vh;
+                    border-radius: 5vh;
+                    outline-color: #8358ff;
+                    border: solid 1px #e7e8ec;
+                }
+
+                button {
+                    position: absolute;
+                    right: 2vh;
+                    top: 1.2vh;
+                    border: none;
+                    background: #8358ff;
+                    color: white;
+                    padding: 1.5vh;
+                    width: 15vh;
+                    border-radius: 5vh;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    /* collections.html */
+
+    .exploreCollections-Card {
+        display: flex;
+        gap: 0 !important;
+        
+        .exploreCollections-Images {
+            display: flex;
+            align-items: center;
+            gap: 2vh;
+
+            img {
+                border-radius: 2vh;
+            }
+        }
+
+        .exploreCollections-SmallImages {
+            display: flex;
+            flex-direction: column;
+            gap: 1.65vh;
+        }
+
+        .exploreCollections-CardBottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1vh;
+            margin-top: 2vh;
+
+            .CardBottomLink {
+                color: #131740;
+
+                &:hover {
+                    color: #8358ff;
+                }
+            }
+        }
+
+        .exploreCollections-CardBottomLeft {
+            display: flex;
+            align-items: center;
+            gap: 1vh;
             position: relative;
 
-            input {
-                padding: 2.5vh;
-                width: 75vh;
-                border-radius: 5vh;
-                outline-color: #8358ff;
-                border: solid 1px #e7e8ec;
+            p {
+                a {
+                    font-family: "DM Sans", sans-serif;
+                    font-weight: 600;
+                    color: #8358ff !important;
+                }
             }
 
-            button {
+            span {
                 position: absolute;
-                right: 2vh;
-                top: 1.2vh;
-                border: none;
-                background: #8358ff;
-                color: white;
-                padding: 1.5vh;
-                width: 15vh;
-                border-radius: 5vh;
-                cursor: pointer;
+                right: 0;
+                color: #5a5d79;
+                font-weight: 600;
             }
         }
-    }
-}
-
-/* collections.html */
-
-.exploreCollections-Images {
-    display: flex;
-    align-items: center;
-    gap: 2vh;
-
-    img {
-        border-radius: 2vh;
-    }
-}
-
-.exploreCollections-SmallImages {
-    display: flex;
-    flex-direction: column;
-    gap: 1.65vh;
-}
-
-.exploreCollections-CardBottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1vh;
-    margin-top: 2vh;
-
-    .CardBottomLink {
-        color: #131740;
-
-        &:hover {
-            color: #8358ff;
-        }
-    }
-}
-
-.exploreCollections-CardBottomLeft {
-    display: flex;
-    align-items: center;
-    gap: 1vh;
-    position: relative;
-
-    p {
-        a {
-            font-family: "DM Sans", sans-serif;
-            font-weight: 600;
-        }
-    }
-
-    span {
-        position: absolute;
-        right: 0;
-        color: #5a5d79;
-        font-weight: 600;
     }
 }

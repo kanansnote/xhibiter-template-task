@@ -75,8 +75,11 @@ header #headerContent {
   align-items: center;
   padding-top: 4vh;
 }
-header #headerContent img {
-  width: 10%;
+header #headerContent a {
+  width: 25vh;
+}
+header #headerContent a #websiteLogo {
+  width: 25vh;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -178,9 +181,12 @@ header #headerContent nav ul li .ExploreDropdown .dropdownContent a {
   display: flex;
   align-items: center;
   gap: 2vh;
+  padding-left: 7vh;
+  width: 30vh;
 }
 header #headerContent nav ul li .ExploreDropdown .dropdownContent a img {
   padding-bottom: 0.5vh;
+  width: 15px;
 }
 header #headerContent nav ul li .ExploreDropdown:hover .dropdownContent {
   width: 70vh;
@@ -219,6 +225,7 @@ header.scrolled {
 
 main {
   /* index.html */
+  /* collections.html */
 }
 main .background {
   position: absolute;
@@ -405,10 +412,10 @@ main #HotBids .hotBidsCards .BothSwiperArrows {
   border-radius: 6vh;
   border: none;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 main #HotBids .hotBidsCards .BothSwiperArrows:hover {
-  background-color: #3BB77E;
+  background-color: #8358ff;
   color: white;
 }
 main #HotBids .hotBidsCards .BothSwiperArrows::after {
@@ -421,44 +428,33 @@ main #TopCollections {
   gap: 5vh;
   background-color: #fcfcfe;
 }
-main #TopCollections .sectionHeader .TopCollectionsDropdown {
+main #TopCollections .sectionHeader #topCollectionsForm {
   position: relative;
-  display: inline-block;
 }
-main #TopCollections .sectionHeader .TopCollectionsDropdown h1, main #TopCollections .sectionHeader .TopCollectionsDropdown h2 {
-  cursor: pointer;
-}
-main #TopCollections .sectionHeader .TopCollectionsDropdown h1 {
+main #TopCollections .sectionHeader #topCollectionsForm i {
+  position: absolute;
+  right: 0;
+  top: 0;
   color: #8358ff;
+  font-size: 27px;
 }
-main #TopCollections .sectionHeader .TopCollectionsDropdown h1 i {
-  margin-left: 5px;
-  transition: 0.2s ease-in-out;
-  position: relative;
-  top: 2px;
+main #TopCollections .sectionHeader #topCollectionsForm #topCollectionsDropdown {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 30vh;
+  font-size: 27px;
+  color: #8358ff;
+  padding-top: 1px;
 }
-main #TopCollections .sectionHeader .TopCollectionsDropdown .dropdownContent {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  width: 35vh;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-main #TopCollections .sectionHeader .TopCollectionsDropdown:hover .dropdownContent {
-  display: flex;
-  align-items: flex-start;
-  padding: 5vh 6vh;
-  flex-direction: column;
-  gap: 5vh;
-  position: absolute;
-  top: 6.5vh;
-  left: -1vh;
-  background-color: white;
-  border-radius: 3vh;
-}
-main #TopCollections .sectionHeader .TopCollectionsDropdown:hover .dropdownContent i {
-  transform: rotate(180deg);
+main #TopCollections .sectionHeader #topCollectionsForm #topCollectionsDropdown option {
+  font-size: 16px;
+  color: #131740;
+  padding-left: 5vh !important;
 }
 main #TopCollections #topCollectionsCards {
   display: flex;
@@ -475,6 +471,12 @@ main #TopCollections #topCollectionsCards .topCollectionsCard {
   border-radius: 4vh;
   background-color: #fff;
   padding: 3vh 0;
+}
+main #TopCollections #topCollectionsCards .topCollectionsCard a {
+  color: #131740;
+}
+main #TopCollections #topCollectionsCards .topCollectionsCard a:hover {
+  color: #8358ff;
 }
 main #TopCollections #topCollectionsCards .topCollectionsCard span {
   transform: translateX(3.5vh);
@@ -498,23 +500,22 @@ main #TopCollections #goToRankings {
 main #TopCollections #goToRankings:hover {
   background-color: #7444ff;
 }
-
-.TrendingCategories {
+main .TrendingCategories {
   display: flex;
   flex-direction: column;
   gap: 7vh;
 }
-.TrendingCategories .trendingCategories-Header {
+main .TrendingCategories .trendingCategories-Header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 25vh;
 }
-.TrendingCategories .trendingCategories-Header ul {
+main .TrendingCategories .trendingCategories-Header ul {
   display: flex;
   gap: 3vh;
 }
-.TrendingCategories .trendingCategories-Header ul li {
+main .TrendingCategories .trendingCategories-Header ul li {
   display: flex;
   align-items: center;
   padding: 1.5vh 2vh;
@@ -522,47 +523,130 @@ main #TopCollections #goToRankings:hover {
   border: solid 1px #e7e8ec;
   border-radius: 2vh;
   font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
-.TrendingCategories .trendingCategories-Header ul li:nth-child(1) {
+main .TrendingCategories .trendingCategories-Header ul li:hover {
+  background-color: #8358ff;
+  color: white;
+}
+main .TrendingCategories .trendingCategories-Header ul li:hover img {
+  fill: white;
+}
+main .TrendingCategories .trendingCategories-Header ul li:nth-child(1) {
   background-color: #e7e8ec;
 }
-.TrendingCategories .trendingCategories-Cards {
+main .TrendingCategories .trendingCategories-Header ul li:nth-child(1):hover {
+  color: white;
+  background-color: #8358ff;
+}
+main .TrendingCategories .trendingCategories-Header form {
+  border: solid 1px #e7e8ec;
+  padding: 1.5vh;
+  border-radius: 1vh;
+}
+main .TrendingCategories .trendingCategories-Header form select {
+  background-color: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main .TrendingCategories .trendingCategories-Cards {
   display: flex;
   justify-content: center;
   gap: 6vh;
   flex-wrap: wrap;
 }
-.TrendingCategories .trendingCategories-Cards .trendingCategories-Card {
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
   border: solid 1px #e7e8ec;
   border-radius: 2vh;
   padding: 3vh;
+  position: relative;
 }
-.TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom {
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-Favorites {
+  display: flex;
+  align-items: center;
+  gap: 0.5vh;
+  position: absolute;
+  right: 5vh;
+  top: 5vh;
+  padding: 1vh 2vh;
+  border-radius: 1vh;
+  background-color: white;
+  color: #5a5d79;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-Favorites i {
+  padding-bottom: 1px;
+  cursor: pointer;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card img {
+  border-radius: 1.5vh;
+  transition: 0.15s ease-in-out;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card a {
+  margin-top: 2vh;
+  color: #131740;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card a:hover {
+  color: #8358ff;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-SmallImages {
+  display: flex;
+  position: absolute;
+  top: 38.5vh;
+  left: 5vh;
+  cursor: pointer;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-SmallImages img {
+  border: solid 2px white;
+  border-radius: 4vh;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-SmallImages img:hover {
+  border: solid 2px #8358ff;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-SmallImages img:nth-child(2) {
+  position: absolute;
+  left: 2.5vh;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a {
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a {
   display: flex;
   align-items: center;
   gap: 0.5vh;
+  color: #5a5d79;
+  margin-top: 0;
 }
-.TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a img {
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a i {
   padding-bottom: 0.5vh;
 }
-
-#CreateAndSellYourNFTs {
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom a:hover {
+  color: #8358ff;
+}
+main .TrendingCategories .trendingCategories-Cards .trendingCategories-Card .trendingCategories-TextBottom button {
+  background: none;
+  border: none;
+  color: #8358ff;
+  cursor: pointer;
+}
+main #CreateAndSellYourNFTs {
   display: flex;
   flex-direction: column;
   gap: 10vh;
   background-color: #fcfcfe !important;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -571,36 +655,48 @@ main #TopCollections #goToRankings:hover {
   gap: 4vh;
   width: 45vh;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow {
-  width: 8vh;
-  padding: 1.5vh;
-  border-radius: 5vh;
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow {
+  width: 10vh;
+  padding: 2.5vh 6vh;
+  border-radius: 8vh;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(1) {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image {
+  border-radius: 5vh;
+  width: 7vh;
+  height: 7vh;
+  position: relative;
+  right: 3.4vh;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image img {
+  position: absolute;
+  right: 1.5vh;
+  top: 1.5vh;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow1 {
   background-color: #CDBCFF !important;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(2) {
-  background-color: #C4F2E3 !important;
-}
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(3) {
-  background-color: #cddffb !important;
-}
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow:nth-child(4) {
-  background-color: #ffd0d0 !important;
-}
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(1) {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow1 .NFTImage1 {
   background-color: #8358ff !important;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(2) {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow2 {
+  background-color: #C4F2E3 !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow2 .NFTImage2 {
   background-color: #10B981 !important;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(3) {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow3 {
+  background-color: #cddffb !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow3 .NFTImage3 {
   background-color: #428AF8 !important;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .createAndSellYourNFTs-ImageShadow .createAndSellYourNFTs-Image:nth-child(4) {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow4 {
+  background-color: #ffd0d0 !important;
+}
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card .NFTImageShadow4 .NFTImage4 {
   background-color: #ef4444 !important;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -608,21 +704,21 @@ main #TopCollections #goToRankings:hover {
   text-align: center;
   gap: 7vh;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom p {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom p {
   font-size: 20px;
   width: 56%;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form {
   position: relative;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form input {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form input {
   padding: 2.5vh;
   width: 75vh;
   border-radius: 5vh;
   outline-color: #8358ff;
   border: solid 1px #e7e8ec;
 }
-#CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form button {
+main #CreateAndSellYourNFTs #createAndSellYourNFTs-Bottom form button {
   position: absolute;
   right: 2vh;
   top: 1.2vh;
@@ -634,48 +730,48 @@ main #TopCollections #goToRankings:hover {
   border-radius: 5vh;
   cursor: pointer;
 }
-
-/* collections.html */
-.exploreCollections-Images {
+main .exploreCollections-Card {
+  display: flex;
+  gap: 0 !important;
+}
+main .exploreCollections-Card .exploreCollections-Images {
   display: flex;
   align-items: center;
   gap: 2vh;
 }
-.exploreCollections-Images img {
+main .exploreCollections-Card .exploreCollections-Images img {
   border-radius: 2vh;
 }
-
-.exploreCollections-SmallImages {
+main .exploreCollections-Card .exploreCollections-SmallImages {
   display: flex;
   flex-direction: column;
   gap: 1.65vh;
 }
-
-.exploreCollections-CardBottom {
+main .exploreCollections-Card .exploreCollections-CardBottom {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1vh;
   margin-top: 2vh;
 }
-.exploreCollections-CardBottom .CardBottomLink {
+main .exploreCollections-Card .exploreCollections-CardBottom .CardBottomLink {
   color: #131740;
 }
-.exploreCollections-CardBottom .CardBottomLink:hover {
+main .exploreCollections-Card .exploreCollections-CardBottom .CardBottomLink:hover {
   color: #8358ff;
 }
-
-.exploreCollections-CardBottomLeft {
+main .exploreCollections-Card .exploreCollections-CardBottomLeft {
   display: flex;
   align-items: center;
   gap: 1vh;
   position: relative;
 }
-.exploreCollections-CardBottomLeft p a {
+main .exploreCollections-Card .exploreCollections-CardBottomLeft p a {
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
+  color: #8358ff !important;
 }
-.exploreCollections-CardBottomLeft span {
+main .exploreCollections-Card .exploreCollections-CardBottomLeft span {
   position: absolute;
   right: 0;
   color: #5a5d79;

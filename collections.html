@@ -14,7 +14,7 @@
 <body>
     <header>
         <div id="headerContent">
-            <img src="./src/images/for-all-pages/logo.png" alt="Logo">
+            <a href="index.html"><img id="websiteLogo" src="./src/images/for-all-pages/logo.png" alt="Logo"></a>
             <form action="">
                 <img src="./src/images/for-all-pages/search.svg" alt="Search Icon">
                 <input type="text" placeholder="Search">
@@ -146,7 +146,12 @@
                     <li><img src="./src/images/home/trending-categories/camera.svg" alt="">Photography</li>
                     <li><img src="./src/images/home/trending-categories/web.svg" alt="">Virtual World</li>
                 </ul>
-                <div>Price: Low to High</div>
+                <form action="">
+                    <select title="Select Options">
+                        <option value="">Price: Low to High</option>
+                        <option value="">Price: High to Low</option>
+                    </select>
+                </form>
             </div>
             <div class="trendingCategories-Cards exploreCollections-Cards">
                 <div class="trendingCategories-Card exploreCollections-Card">
