@@ -42,3 +42,23 @@ document.addEventListener('click', function(event) {
       selectArrowElement.style.transform = 'rotate(0deg)';
     }
 });
+
+//
+const textToCopyArea = document.getElementById('textToCopyArea');
+const copiedText = document.createElement('span');
+copiedText.classList.add('copied-text');
+copiedText.textContent = 'Copied!';
+
+textToCopyArea.addEventListener('click', () => {
+  const text = textToCopyArea.innerText;
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      textToCopyArea.appendChild(copiedText); // Add "Copied!" text on success
+      setTimeout(() => {
+        copiedText.remove(); // Remove "Copied!" text after a short delay
+      }, 1000); // Adjust delay as needed (in milliseconds)
+    })
+    .catch(err => {
+      console.error('Failed to copy text:', err);
+    });
+});
