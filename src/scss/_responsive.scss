@@ -4,6 +4,14 @@ header {
     }
 }
 
+main {
+    #UpBanner {
+        #upBannerMobileImages {
+            display: none;
+        }
+    }
+}
+
 @media only screen and (max-width: 1200px) {
 
     header {
@@ -71,9 +79,58 @@ header {
     }
 
     main {
-        section, #createAndSellYourNFTs-Cards {
+
+        section,
+        #createAndSellYourNFTs-Cards {
             display: flex;
             flex-wrap: wrap;
+        }
+
+        #createAndSellYourNFTs-Bottom {
+
+            p {
+                width: 85% !important;
+                font-size: 18px !important;
+            }
+
+        }
+
+        #UpBanner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            #upBanner-Main {
+
+                h1 {
+                    width: 75vh;
+                    font-size: 50px;
+                }
+
+                p {
+                    width: 65vh;
+                    font-size: 18px;
+                }
+            }
+
+            #upBannerImages {
+
+                img {
+                    &:nth-child(1) {
+                        position: absolute;
+                        top: -2vh;
+                        right: 0;
+                        width: 75vh;
+                    }
+
+                    &:nth-child(2) {
+                        position: absolute;
+                        top: -8vh;
+                        right: 5vh;
+                        width: 65vh;
+                    }
+                }
+            }
         }
 
         .trendingCategories-Header {
@@ -82,7 +139,7 @@ header {
             align-items: unset;
             flex-wrap: wrap;
             gap: 5vh;
-            
+
             ul {
                 display: flex;
                 justify-content: center;
@@ -97,13 +154,174 @@ header {
     }
 }
 
-@media only screen and (max-width: 800px) {
-    
-    main {
+@media only screen and (max-width: 920px) {
 
-        section {
+    section {
+        padding: 5vh 0 0 0;
+    }
+
+    #UpBanner {
+        display: flex;
+        flex-direction: column;
+
+        #upBanner-Main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            margin-top: -10vh !important;
+
+            h1,
+            p {
+                width: 90% !important;
+            }
+        }
+
+        #upBannerImages {
+            display: none;
+        }
+
+        #upBannerMobileImages {
+            display: flex !important;
+            align-items: center;
+            position: relative;
+            margin-bottom: 10vh;
+
+            img {
+                top: 5vh;
+
+                &:nth-child(1) {
+                    position: relative;
+                    top: 18vh;
+                    left: 10vh;
+                    width: 80%;
+                    z-index: 1;
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 15%;
+                    left: 15%;
+                    transform: rotate(10deg);
+                    border-radius: 20vh;
+                    width: 70%;
+                    z-index: -1;
+                }
+            }
+
+            .up-down-animation {
+                animation-name: up-down;
+                animation-duration: 7s;
+                /* Adjust duration for animation speed */
+                animation-iteration-count: infinite;
+                /* Loop animation forever */
+            }
+
+            @keyframes up-down {
+                0% {
+                    transform: translateY(0);
+                }
+
+                /* Start at original position */
+                50% {
+                    transform: translateY(-50px);
+                }
+
+                /* Move image down */
+                100% {
+                    transform: translateY(0);
+                }
+
+                /* Move image back up (loop) */
+            }
+        }
+    }
+
+
+    footer {
+        padding: 5vh 0 5vh 0;
+    }
+
+    #FooterTop, #footerTop-Left, #FooterBottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        p {
+            width: 90% !important;
+        }
+    }
+
+    .infoLinks1 {
+        display: flex;
+        gap: 1vh;
+    }
+
+    .infoLinks2 {
+        display: flex;
+        gap: 2vh;
+    }
+
+    .infoLinks3 {
+        display: flex;
+        gap: 3.8vh;
+    }
+
+    #FooterTop {
+        gap: 5vh;
+    }
+
+    #FooterBottom {
+        gap: 3vh;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    #TopCollections {
+
+        .sectionHeader {
             display: flex;
             flex-direction: column;
+            gap: 3vh;
         }
+    }
+
+    #createAndSellYourNFTs-Cards {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #createAndSellYourNFTs-Bottom {
+
+        p {
+            font-size: 16px !important;
+        }
+
+        form {
+            input {
+                width: 50vh !important;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    
+    footer {
+        display: flex;
+        gap: 4vh !important;
+    }
+
+    #footerTop-Right {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7vh !important;
     }
 }

@@ -345,7 +345,6 @@ main #UpBanner #upBanner-Main {
   display: flex;
   flex-direction: column;
   gap: 5vh;
-  width: 70vh;
 }
 main #UpBanner #upBanner-Main h1 {
   font-size: 60px;
@@ -353,6 +352,7 @@ main #UpBanner #upBanner-Main h1 {
   width: 85vh;
 }
 main #UpBanner #upBanner-Main p {
+  width: 70vh;
   font-size: 20px;
   color: #5a5d79;
 }
@@ -390,17 +390,20 @@ main #UpBanner #upBanner-Main ul li:nth-child(2):hover {
 main #UpBanner #upBanner-Main ul li:nth-child(2):hover a {
   color: white;
 }
+main #UpBanner #upBannerImages {
+  position: relative;
+}
 main #UpBanner #upBannerImages img:nth-child(1) {
   position: relative;
   top: 4vh;
-  right: -7vh;
+  right: -5vh;
   width: 90vh;
   z-index: 1;
 }
 main #UpBanner #upBannerImages img:nth-child(2) {
   position: absolute;
-  top: 35vh;
-  right: 17vh;
+  top: 5vh;
+  right: 5vh;
   transform: rotate(10deg);
   border-radius: 20vh;
   width: 70vh;
@@ -622,7 +625,7 @@ main .TrendingCategories .trendingCategories-Header ul li {
   padding: 1vh 2vh;
   color: #5a5d79;
   border: solid 1px #e7e8ec;
-  border-radius: 2vh;
+  border-radius: 1vh;
   font-size: 15px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -645,6 +648,7 @@ main .TrendingCategories .trendingCategories-Header form {
   border: solid 1px #e7e8ec;
   padding: 1.5vh;
   border-radius: 1vh;
+  margin-bottom: 3px;
 }
 main .TrendingCategories .trendingCategories-Header form select {
   background-color: none;
@@ -746,6 +750,7 @@ main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 5vh;
 }
 main #CreateAndSellYourNFTs #createAndSellYourNFTs-Cards .createAndSellYourNFTs-Card {
   display: flex;
@@ -928,6 +933,7 @@ footer #FooterTop #footerTop-Right .siteInfoLinks .siteInfoLinks-Main {
 footer #FooterBottom {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 footer #FooterBottom #footerBottomLinks {
   display: flex;
@@ -935,6 +941,10 @@ footer #FooterBottom #footerBottomLinks {
 }
 
 header #headerMobileContent {
+  display: none;
+}
+
+main #UpBanner #upBannerMobileImages {
   display: none;
 }
 
@@ -991,9 +1001,39 @@ header #headerMobileContent {
   header #headerMobileContent .show {
     display: block !important;
   }
-  main section, main #createAndSellYourNFTs-Cards {
+  main section,
+  main #createAndSellYourNFTs-Cards {
     display: flex;
     flex-wrap: wrap;
+  }
+  main #createAndSellYourNFTs-Bottom p {
+    width: 85% !important;
+    font-size: 18px !important;
+  }
+  main #UpBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main #UpBanner #upBanner-Main h1 {
+    width: 75vh;
+    font-size: 50px;
+  }
+  main #UpBanner #upBanner-Main p {
+    width: 65vh;
+    font-size: 18px;
+  }
+  main #UpBanner #upBannerImages img:nth-child(1) {
+    position: absolute;
+    top: -2vh;
+    right: 0;
+    width: 75vh;
+  }
+  main #UpBanner #upBannerImages img:nth-child(2) {
+    position: absolute;
+    top: -8vh;
+    right: 5vh;
+    width: 65vh;
   }
   main .trendingCategories-Header {
     display: flex;
@@ -1012,9 +1052,134 @@ header #headerMobileContent {
     display: flex;
   }
 }
-@media only screen and (max-width: 800px) {
-  main section {
+@media only screen and (max-width: 920px) {
+  section {
+    padding: 5vh 0 0 0;
+  }
+  #UpBanner {
     display: flex;
     flex-direction: column;
+  }
+  #UpBanner #upBanner-Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: -10vh !important;
+  }
+  #UpBanner #upBanner-Main h1,
+  #UpBanner #upBanner-Main p {
+    width: 90% !important;
+  }
+  #UpBanner #upBannerImages {
+    display: none;
+  }
+  #UpBanner #upBannerMobileImages {
+    display: flex !important;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10vh;
+  }
+  #UpBanner #upBannerMobileImages img {
+    top: 5vh;
+  }
+  #UpBanner #upBannerMobileImages img:nth-child(1) {
+    position: relative;
+    top: 18vh;
+    left: 10vh;
+    width: 80%;
+    z-index: 1;
+  }
+  #UpBanner #upBannerMobileImages img:nth-child(2) {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: rotate(10deg);
+    border-radius: 20vh;
+    width: 70%;
+    z-index: -1;
+  }
+  #UpBanner #upBannerMobileImages .up-down-animation {
+    animation-name: up-down;
+    animation-duration: 7s;
+    /* Adjust duration for animation speed */
+    animation-iteration-count: infinite;
+    /* Loop animation forever */
+  }
+  @keyframes up-down {
+    0% {
+      transform: translateY(0);
+    }
+    /* Start at original position */
+    50% {
+      transform: translateY(-50px);
+    }
+    /* Move image down */
+    100% {
+      transform: translateY(0);
+    }
+    /* Move image back up (loop) */
+  }
+  footer {
+    padding: 5vh 0 5vh 0;
+  }
+  #FooterTop, #footerTop-Left, #FooterBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  #FooterTop p, #footerTop-Left p, #FooterBottom p {
+    width: 90% !important;
+  }
+  .infoLinks1 {
+    display: flex;
+    gap: 1vh;
+  }
+  .infoLinks2 {
+    display: flex;
+    gap: 2vh;
+  }
+  .infoLinks3 {
+    display: flex;
+    gap: 3.8vh;
+  }
+  #FooterTop {
+    gap: 5vh;
+  }
+  #FooterBottom {
+    gap: 3vh;
+  }
+}
+@media only screen and (max-width: 660px) {
+  #TopCollections .sectionHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
+  #createAndSellYourNFTs-Cards {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  #createAndSellYourNFTs-Bottom p {
+    font-size: 16px !important;
+  }
+  #createAndSellYourNFTs-Bottom form input {
+    width: 50vh !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer {
+    display: flex;
+    gap: 4vh !important;
+  }
+  #footerTop-Right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7vh !important;
   }
 }/*# sourceMappingURL=style.css.map */

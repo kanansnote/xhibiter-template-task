@@ -38,9 +38,11 @@ textToCopyArea.addEventListener('click', () => {
 
 const burgerMenu = document.querySelector('.burgerMenu');
 const navMenu = document.querySelector('.navMenu');
+const headerMobileInput = document.getElementById ('headerMobileInput');
 const faBars = document.querySelector('.fa-bars');
 const faXMark = document.querySelector('.fa-circle-xmark');
 
+headerMobileInput.style.display = 'none';
 faXMark.style.display = 'none';
 
 // Function to open the menu
@@ -60,9 +62,11 @@ burgerMenu.addEventListener('click', function () {
     if (burgerMenu.classList.contains('open')) {
         closeMenu();
         faBars.style.display = 'block';
+        headerMobileInput.style.display = 'none';
         faXMark.style.display = 'none';
     } else {
         openMenu();
+        headerMobileInput.style.display = 'block';
         faBars.style.display = 'none';
         faXMark.style.display = 'block';
     }
@@ -75,12 +79,15 @@ const selectDropdown = document.getElementById('topCollectionsDropdown');
 const selectArrowElement = document.querySelector('.fa-angle-down');
 let isOpen = false; // Flag to track open/closed state
 
-selectForm.addEventListener('click', function () {
-  isOpen = !isOpen; // Toggle the flag on each click
+if (selectForm) {
 
-  // Update the transform property based on the flag
-  selectArrowElement.style.transform = `rotate(${isOpen ? 180 : 0}deg)`;
-});
+  selectForm.addEventListener('click', function () {
+    isOpen = !isOpen; // Toggle the flag on each click
+
+    // Update the transform property based on the flag
+    selectArrowElement.style.transform = `rotate(${isOpen ? 180 : 0}deg)`;
+  });
+}
 
 document.addEventListener('click', function(event) {
     if (!event.target.matches('#topCollectionsForm') && !selectDropdown.contains(event.target)) {
