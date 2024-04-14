@@ -13,16 +13,63 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Slider for .hotBidsCards section using swiper.js
-const swiper = new Swiper('.hotBidsCards', {
-    slidesPerView: '4', // Adjust this value to control how many slides are visible at a time
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+// Copy to Clipboard
+
+const textToCopyArea = document.querySelector('.textToCopyArea');
+const copiedText = document.createElement('span');
+copiedText.classList.add('copied-text');
+copiedText.textContent = 'Copied!';
+
+textToCopyArea.addEventListener('click', () => {
+  const text = textToCopyArea.innerText;
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      textToCopyArea.appendChild(copiedText); // Add "Copied!" text on success
+      setTimeout(() => {
+        copiedText.remove(); // Remove "Copied!" text after a short delay
+      }, 1000); // Adjust delay as needed (in milliseconds)
+    })
+    .catch(err => {
+      console.error('Failed to copy text:', err);
+    });
 });
 
-//
+// Configuring Burger Menu
+
+const burgerMenu = document.querySelector('.burgerMenu');
+const navMenu = document.querySelector('.navMenu');
+const faBars = document.querySelector('.fa-bars');
+const faXMark = document.querySelector('.fa-circle-xmark');
+
+faXMark.style.display = 'none';
+
+// Function to open the menu
+function openMenu() {
+    navMenu.classList.add('show');
+    burgerMenu.classList.add('open');
+}
+
+// Function to close the menu
+function closeMenu() {
+    navMenu.classList.remove('show');
+    burgerMenu.classList.remove('open');
+}
+
+// Event listener for click event
+burgerMenu.addEventListener('click', function () {
+    if (burgerMenu.classList.contains('open')) {
+        closeMenu();
+        faBars.style.display = 'block';
+        faXMark.style.display = 'none';
+    } else {
+        openMenu();
+        faBars.style.display = 'none';
+        faXMark.style.display = 'block';
+    }
+});
+
+// Setting Section's Dropdown
+
 const selectForm = document.getElementById('topCollectionsForm');
 const selectDropdown = document.getElementById('topCollectionsDropdown');
 const selectArrowElement = document.querySelector('.fa-angle-down');
@@ -43,22 +90,12 @@ document.addEventListener('click', function(event) {
     }
 });
 
-//
-const textToCopyArea = document.getElementById('textToCopyArea');
-const copiedText = document.createElement('span');
-copiedText.classList.add('copied-text');
-copiedText.textContent = 'Copied!';
+// Slider for .hotBidsCards section using swiper.js
 
-textToCopyArea.addEventListener('click', () => {
-  const text = textToCopyArea.innerText;
-  navigator.clipboard.writeText(text)
-    .then(() => {
-      textToCopyArea.appendChild(copiedText); // Add "Copied!" text on success
-      setTimeout(() => {
-        copiedText.remove(); // Remove "Copied!" text after a short delay
-      }, 1000); // Adjust delay as needed (in milliseconds)
-    })
-    .catch(err => {
-      console.error('Failed to copy text:', err);
-    });
+const swiper = new Swiper('.hotBidsCards', {
+  slidesPerView: '4', // Adjust this value to control how many slides are visible at a time
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
 });

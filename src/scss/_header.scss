@@ -6,7 +6,7 @@ header {
     transition: background-color 0.3s ease;
     z-index: 500;
 
-    #headerContent {
+    #headerContent, #headerMobileContent {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -15,7 +15,7 @@ header {
         a {
             width: 25vh;
 
-            #websiteLogo {
+            .websiteLogo {
                 width: 25vh;
                 object-fit: contain;
             }
@@ -88,11 +88,11 @@ header {
                             }
 
                             .dropdownContent1 {
-                                #CollectionsPageAvailable {
+                                .CollectionsPageAvailable {
                                     color: #131740;
                                 }
 
-                                #CollectionsPageSelected {
+                                .CollectionsPageSelected {
                                     color: #8358ff;
                                 }
                             }
@@ -196,14 +196,14 @@ header {
             }
         }
 
-        #headerButtons {
+        .headerButtons {
             display: flex;
             gap: 2vh;
 
             li {
 
                 button,
-                #buttonDropdown {
+                .buttonDropdown {
                     cursor: pointer;
                     width: 6.5vh;
                     height: 6.5vh;
@@ -218,16 +218,16 @@ header {
                     }
                 }
 
-                #buttonDropdown {
+                .buttonDropdown {
                     padding-left: 2vh;
                     padding-top: 1.7vh;
 
-                    #buttonDropdown-Content {
+                    .buttonDropdown-Content {
                         display: none;
                     }
 
                     &:hover {
-                        #buttonDropdown-Content {
+                        .buttonDropdown-Content {
                             display: flex;
                             flex-direction: column;
                             align-items: flex-start;
@@ -239,7 +239,7 @@ header {
                             height: 40.9vh;
                             border-radius: 1vh;
 
-                            #textToCopy {
+                            .textToCopy {
                                 position: relative;
                                 display: flex;
                                 align-items: center;
@@ -257,7 +257,7 @@ header {
                                 }
                             }
 
-                            #textToCopyArea {
+                            .textToCopyArea {
                                 cursor: pointer;
                                 width: 35vh;
                                 padding: 5px;
@@ -284,13 +284,13 @@ header {
                                 /* Smooth fade-in animation */
                             }
 
-                            #textToCopyArea:hover .copied-text,
-                            #textToCopyArea.copied .copied-text {
+                            .textToCopyArea:hover .copied-text,
+                            .textToCopyArea.copied .copied-text {
                                 opacity: 1;
                                 /* Show "Copied!" text on hover or success */
                             }
 
-                            #buttonDropdown-ContentText {
+                            .buttonDropdown-ContentText {
                                 display: flex;
                                 border: solid 1px #e7e8ec;
                                 padding: 2vh 0vh 2vh 5vh;
@@ -299,7 +299,7 @@ header {
                                     color: #5a5d79;
                                 }
 
-                                #buttonDropdown-Balance {
+                                .buttonDropdown-Balance {
                                     display: flex;
 
                                     span {

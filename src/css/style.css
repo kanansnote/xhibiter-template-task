@@ -69,82 +69,82 @@ header {
   transition: background-color 0.3s ease;
   z-index: 500;
 }
-header #headerContent {
+header #headerContent, header #headerMobileContent {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 4vh;
 }
-header #headerContent a {
+header #headerContent a, header #headerMobileContent a {
   width: 25vh;
 }
-header #headerContent a #websiteLogo {
+header #headerContent a .websiteLogo, header #headerMobileContent a .websiteLogo {
   width: 25vh;
   -o-object-fit: contain;
      object-fit: contain;
 }
-header #headerContent form {
+header #headerContent form, header #headerMobileContent form {
   position: relative;
 }
-header #headerContent form img {
+header #headerContent form img, header #headerMobileContent form img {
   position: absolute;
   top: 13px;
   left: 15px;
   width: 20px;
 }
-header #headerContent form input {
+header #headerContent form input, header #headerMobileContent form input {
   width: 50vh;
   padding: 2.5vh 7vh;
   border-radius: 2.5vh;
   border: none;
   outline-color: #8358ff;
 }
-header #headerContent form input::-moz-placeholder {
+header #headerContent form input::-moz-placeholder, header #headerMobileContent form input::-moz-placeholder {
   font-size: 16px;
 }
-header #headerContent form input::placeholder {
+header #headerContent form input::placeholder, header #headerMobileContent form input::placeholder {
   font-size: 16px;
 }
-header #headerContent nav ul {
+header #headerContent nav ul, header #headerMobileContent nav ul {
   display: flex;
   gap: 5vh;
 }
-header #headerContent nav ul li .FirstNavLinkAvailable {
+header #headerContent nav ul li .FirstNavLinkAvailable, header #headerMobileContent nav ul li .FirstNavLinkAvailable {
   color: #131740;
 }
-header #headerContent nav ul li .FirstNavLinkSelected {
+header #headerContent nav ul li .FirstNavLinkSelected, header #headerMobileContent nav ul li .FirstNavLinkSelected {
   color: #8358ff;
 }
-header #headerContent nav ul li a {
+header #headerContent nav ul li a, header #headerMobileContent nav ul li a {
   transition: 0.2s ease-in-out;
   color: #5a5d79;
 }
-header #headerContent nav ul li a:hover {
+header #headerContent nav ul li a:hover, header #headerMobileContent nav ul li a:hover {
   color: #8358ff;
 }
-header #headerContent nav ul li .headerDropdown {
+header #headerContent nav ul li .headerDropdown, header #headerMobileContent nav ul li .headerDropdown {
   position: relative;
 }
-header #headerContent nav ul li .headerDropdown .dropdownLinks {
+header #headerContent nav ul li .headerDropdown .dropdownLinks, header #headerMobileContent nav ul li .headerDropdown .dropdownLinks {
   padding: 6vh 1vh 6vh 1vh;
 }
-header #headerContent nav ul li .headerDropdown .dropdownContent {
+header #headerContent nav ul li .headerDropdown .dropdownContent, header #headerMobileContent nav ul li .headerDropdown .dropdownContent {
   display: none;
 }
-header #headerContent nav ul li .headerDropdown .dropdownContent a {
+header #headerContent nav ul li .headerDropdown .dropdownContent a, header #headerMobileContent nav ul li .headerDropdown .dropdownContent a {
   color: #5a5d79;
   transition: color 0.2s ease-in-out;
 }
-header #headerContent nav ul li .headerDropdown .dropdownContent a:hover {
+header #headerContent nav ul li .headerDropdown .dropdownContent a:hover, header #headerMobileContent nav ul li .headerDropdown .dropdownContent a:hover {
   color: #8358ff;
 }
-header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 #CollectionsPageAvailable {
+header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageAvailable, header #headerMobileContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageAvailable {
   color: #131740;
 }
-header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 #CollectionsPageSelected {
+header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageSelected, header #headerMobileContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageSelected {
   color: #8358ff;
 }
-header #headerContent nav ul li .headerDropdown:hover .dropdownContent {
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -156,56 +156,58 @@ header #headerContent nav ul li .headerDropdown:hover .dropdownContent {
   border-radius: 3vh;
 }
 header #headerContent nav ul li .headerDropdown:hover .dropdownContent .dropdownContent1,
-header #headerContent nav ul li .headerDropdown:hover .dropdownContent .dropdownContent2 {
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent .dropdownContent2, header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent .dropdownContent1,
+header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent .dropdownContent2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1vh;
 }
-header #headerContent nav ul li .headerDropdown:hover .dropdownContent a:hover {
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent a:hover, header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent a:hover {
   background-color: #e7e8ec;
   border-radius: 2vh;
 }
-header #headerContent nav ul li .HomeDropdown:hover .dropdownContent {
+header #headerContent nav ul li .HomeDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .HomeDropdown:hover .dropdownContent {
   width: 70vh;
   height: 35vh;
 }
-header #headerContent nav ul li .PagesDropdown #CollectionsPage {
+header #headerContent nav ul li .PagesDropdown #CollectionsPage, header #headerMobileContent nav ul li .PagesDropdown #CollectionsPage {
   color: #131740;
 }
-header #headerContent nav ul li .PagesDropdown:hover .dropdownContent {
+header #headerContent nav ul li .PagesDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .PagesDropdown:hover .dropdownContent {
   width: 70vh;
   height: 45vh;
 }
-header #headerContent nav ul li .ExploreDropdown .dropdownContent a {
+header #headerContent nav ul li .ExploreDropdown .dropdownContent a, header #headerMobileContent nav ul li .ExploreDropdown .dropdownContent a {
   display: flex;
   align-items: center;
   gap: 2vh;
   padding-left: 7vh;
   width: 30vh;
 }
-header #headerContent nav ul li .ExploreDropdown .dropdownContent a img {
+header #headerContent nav ul li .ExploreDropdown .dropdownContent a img, header #headerMobileContent nav ul li .ExploreDropdown .dropdownContent a img {
   padding-bottom: 0.5vh;
   width: 15px;
 }
-header #headerContent nav ul li .ExploreDropdown:hover .dropdownContent {
+header #headerContent nav ul li .ExploreDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .ExploreDropdown:hover .dropdownContent {
   width: 70vh;
   height: 25vh;
   padding-right: 7vh;
 }
-header #headerContent nav ul li .ResourcesDropdown:hover .dropdownContent {
+header #headerContent nav ul li .ResourcesDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .ResourcesDropdown:hover .dropdownContent {
   display: flex;
   flex-direction: column;
   gap: 5vh;
   width: 30vh;
   padding: 2vh;
 }
-header #headerContent #headerButtons {
+header #headerContent .headerButtons, header #headerMobileContent .headerButtons {
   display: flex;
   gap: 2vh;
 }
-header #headerContent #headerButtons li button,
-header #headerContent #headerButtons li #buttonDropdown {
+header #headerContent .headerButtons li button,
+header #headerContent .headerButtons li .buttonDropdown, header #headerMobileContent .headerButtons li button,
+header #headerMobileContent .headerButtons li .buttonDropdown {
   cursor: pointer;
   width: 6.5vh;
   height: 6.5vh;
@@ -214,19 +216,20 @@ header #headerContent #headerButtons li #buttonDropdown {
   border: none;
   transition: 0.1s ease-in-out;
 }
-header #headerContent #headerButtons li button:hover,
-header #headerContent #headerButtons li #buttonDropdown:hover {
+header #headerContent .headerButtons li button:hover,
+header #headerContent .headerButtons li .buttonDropdown:hover, header #headerMobileContent .headerButtons li button:hover,
+header #headerMobileContent .headerButtons li .buttonDropdown:hover {
   background-color: #8358ff;
   color: white;
 }
-header #headerContent #headerButtons li #buttonDropdown {
+header #headerContent .headerButtons li .buttonDropdown, header #headerMobileContent .headerButtons li .buttonDropdown {
   padding-left: 2vh;
   padding-top: 1.7vh;
 }
-header #headerContent #headerButtons li #buttonDropdown #buttonDropdown-Content {
+header #headerContent .headerButtons li .buttonDropdown .buttonDropdown-Content, header #headerMobileContent .headerButtons li .buttonDropdown .buttonDropdown-Content {
   display: none;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -238,22 +241,22 @@ header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Co
   height: 40.9vh;
   border-radius: 1vh;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #textToCopy {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopy, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopy {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #textToCopy img {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopy img, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopy img {
   position: absolute;
   right: 1.7vh;
   top: 1vh;
   color: #131740;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #textToCopy:hover {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopy:hover, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopy:hover {
   background-color: #e7e8ec;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #textToCopyArea {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopyArea, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopyArea {
   cursor: pointer;
   width: 35vh;
   padding: 5px;
@@ -262,7 +265,7 @@ header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Co
   overflow: hidden;
   text-overflow: ellipsis;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content .copied-text {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .copied-text, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .copied-text {
   position: absolute;
   background-color: #f5f5f5;
   top: 0%;
@@ -278,40 +281,41 @@ header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Co
   transition: opacity 0.3s ease-in-out;
   /* Smooth fade-in animation */
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #textToCopyArea:hover .copied-text,
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #textToCopyArea.copied .copied-text {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopyArea:hover .copied-text,
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopyArea.copied .copied-text, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopyArea:hover .copied-text,
+header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .textToCopyArea.copied .copied-text {
   opacity: 1;
   /* Show "Copied!" text on hover or success */
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #buttonDropdown-ContentText {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText {
   display: flex;
   border: solid 1px #e7e8ec;
   padding: 2vh 0vh 2vh 5vh;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #buttonDropdown-ContentText span {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText span, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText span {
   color: #5a5d79;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #buttonDropdown-ContentText #buttonDropdown-Balance {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText .buttonDropdown-Balance, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText .buttonDropdown-Balance {
   display: flex;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #buttonDropdown-ContentText #buttonDropdown-Balance span {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText .buttonDropdown-Balance span, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText .buttonDropdown-Balance span {
   color: #10b981;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover #buttonDropdown-Content #buttonDropdown-ContentText #buttonDropdown-Balance img {
+header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText .buttonDropdown-Balance img, header #headerMobileContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Content .buttonDropdown-ContentText .buttonDropdown-Balance img {
   width: 15%;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover ul li {
+header #headerContent .headerButtons li .buttonDropdown:hover ul li, header #headerMobileContent .headerButtons li .buttonDropdown:hover ul li {
   display: inline-flex;
   padding: 2vh 5vh 2vh;
   width: 100%;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover ul li a {
+header #headerContent .headerButtons li .buttonDropdown:hover ul li a, header #headerMobileContent .headerButtons li .buttonDropdown:hover ul li a {
   color: #131740;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover ul li a i {
+header #headerContent .headerButtons li .buttonDropdown:hover ul li a i, header #headerMobileContent .headerButtons li .buttonDropdown:hover ul li a i {
   margin-right: 2vh;
 }
-header #headerContent #headerButtons li #buttonDropdown:hover ul li:hover {
+header #headerContent .headerButtons li .buttonDropdown:hover ul li:hover, header #headerMobileContent .headerButtons li .buttonDropdown:hover ul li:hover {
   background-color: #e7e8ec;
 }
 
@@ -606,16 +610,16 @@ main .TrendingCategories .trendingCategories-Header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 25vh;
 }
 main .TrendingCategories .trendingCategories-Header ul {
   display: flex;
   gap: 3vh;
+  margin-right: 27vh;
 }
 main .TrendingCategories .trendingCategories-Header ul li {
   display: flex;
   align-items: center;
-  padding: 1.5vh 2vh;
+  padding: 1vh 2vh;
   color: #5a5d79;
   border: solid 1px #e7e8ec;
   border-radius: 2vh;
@@ -910,7 +914,7 @@ footer #FooterTop #footerTop-Left #socialLinks li a:hover {
 }
 footer #FooterTop #footerTop-Right {
   display: flex;
-  gap: 25vh;
+  gap: 15vh;
 }
 footer #FooterTop #footerTop-Right .siteInfoLinks {
   display: flex;
@@ -928,4 +932,89 @@ footer #FooterBottom {
 footer #FooterBottom #footerBottomLinks {
   display: flex;
   gap: 5vh;
+}
+
+header #headerMobileContent {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  header #headerContent {
+    display: none;
+  }
+  header #headerMobileContent {
+    display: flex;
+    justify-content: space-between;
+    /* navMenu for mobile view */
+  }
+  header #headerMobileContent .websiteLogo {
+    padding-left: 5vh;
+  }
+  header #headerMobileContent .headerButtons {
+    padding-right: 3vh;
+  }
+  header #headerMobileContent .navMenu {
+    display: none;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* Smooth open/close effects */
+    padding-top: 15vh;
+    padding-right: 12vh;
+  }
+  header #headerMobileContent .navMenu ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+  }
+  header #headerMobileContent .navMenu ul li {
+    margin-bottom: 20px;
+    display: block;
+  }
+  header #headerMobileContent .navMenu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s ease-in-out;
+  }
+  header #headerMobileContent .navMenu ul li a:hover {
+    color: #24252a;
+  }
+  header #headerMobileContent .show {
+    display: block !important;
+  }
+  main section, main #createAndSellYourNFTs-Cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .trendingCategories-Header {
+    display: flex;
+    justify-content: unset;
+    align-items: unset;
+    flex-wrap: wrap;
+    gap: 5vh;
+  }
+  main .trendingCategories-Header ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 0 !important;
+  }
+  footer {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 800px) {
+  main section {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

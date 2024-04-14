@@ -14,7 +14,7 @@
 <body>
     <header>
         <div id="headerContent">
-            <a href="index.html"><img id="websiteLogo" src="./src/images/for-all-pages/logo.png" alt="Logo"></a>
+            <a href="index.html"><img class="websiteLogo" src="./src/images/for-all-pages/logo.png" alt="Logo"></a>
             <form action="">
                 <img src="./src/images/for-all-pages/search.svg" alt="Search Icon">
                 <input type="text" placeholder="Search">
@@ -54,7 +54,7 @@
                                     <a href="#">Maintenance</a>
                                     <a href="#">Single Case Study</a>
                                     <a href="#">Item Details</a>
-                                    <a id="CollectionsPageSelected" href="collections.html">Collections</a>
+                                    <a class="CollectionsPageSelected" href="collections.html">Collections</a>
                                     <a href="#">Activity</a>
                                     <a href="#">User</a>
                                     <a href="#">About</a>
@@ -123,10 +123,177 @@
                     <li><a href="#">Create</a></li>
                 </ul>
             </nav>
-            <ul id="headerButtons">
+            <ul class="headerButtons">
                 <li><button title="button"><i class="fa-solid fa-wallet"></i></button></li>
-                <li><button title="button"><i class="fa-solid fa-user"></i></button></li>
+                <li>
+                    <div class="buttonDropdown">
+                        <i class="fa-solid fa-user userButton"></i>
+                        <div class="buttonDropdown-Content">
+                            <div title="Copy" class="textToCopy">
+                                <div class="textToCopyArea">0x7a86c0b064171007716bbd6af96676935799a63e</div>
+                                <img src="./src/images/for-all-pages/header-dropdown/copy-to-clipboard.svg" alt="">
+                            </div>
+                            <div class="buttonDropdown-ContentText">
+                                <span>Balance</span>
+                                <div class="buttonDropdown-Balance">
+                                    <img src="./src/images/home/hot-bids/eth.svg" alt="">
+                                    <span>10 ETH</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+                                <li><a href="#"><i class="fa-solid fa-gear"></i>Edit Profile</a></li>
+                                <li><a href="#"><i class="fa-solid fa-globe"></i>Language</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle-arrow-left"></i>Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
                 <li><button title="button"><i class="fa-solid fa-moon"></i></button></li>
+            </ul>
+        </div>
+        <div id="headerMobileContent">
+            <a href="index.html"><img class="websiteLogo" src="./src/images/for-all-pages/logo.png" alt="Logo"></a>
+            <form action="">
+                <img src="./src/images/for-all-pages/search.svg" alt="Search Icon">
+                <input type="text" placeholder="Search">
+            </form>
+            <nav class="navMenu">
+                <ul>
+                    <li>
+                        <div class="dropdown headerDropdown HomeDropdown">
+                            <a class="dropdownLinks FirstNavLinkAvailable" href="index.html">Home</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#">Home 1</a>
+                                    <a href="#">Home 2</a>
+                                    <a href="#">Home 4</a>
+                                    <a href="#">Home 6</a>
+                                    <a href="#">NFT Game</a>
+                                    <a href="#">Crypto App</a>
+                                    <a href="#">ICO Landing</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#">Home 1 RTL</a>
+                                    <a href="#">Home 3</a>
+                                    <a href="#">Home 5</a>
+                                    <a href="#">Crypto Consultant</a>
+                                    <a href="#">DAO Platform</a>
+                                    <a href="#">Crypto Trading</a>
+                                    <a href="#">NFT Aggregator</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown PagesDropdown">
+                            <a class="dropdownLinks" href="#">Pages</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#">Maintenance</a>
+                                    <a href="#">Single Case Study</a>
+                                    <a href="#">Item Details</a>
+                                    <a class="CollectionsPageSelected" href="collections.html">Collections</a>
+                                    <a href="#">Activity</a>
+                                    <a href="#">User</a>
+                                    <a href="#">About</a>
+                                    <a href="#">Wallet</a>
+                                    <a href="#">Page 404</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#">Case Studies</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Collections Wide</a>
+                                    <a href="#">Collection</a>
+                                    <a href="#">Rankings</a>
+                                    <a href="#">Edit Profile</a>
+                                    <a href="#">Contact</a>
+                                    <a href="#">Login</a>
+                                    <a href="#">Terms of Service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown ExploreDropdown">
+                            <a class="dropdownLinks" href="#">Explore</a>
+                            <div class="dropdownContent">
+                                <div class="dropdownContent1">
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/all-colored.svg"
+                                            alt="">All NFTs</a>
+                                    <a href="#"><img
+                                            src="./src/images/for-all-pages/header-dropdown/palette-colored.svg"
+                                            alt="">Art</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/bear-colored.svg"
+                                            alt="">Collectibles</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/text-colored.svg"
+                                            alt="">Domain Names</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/note-colored.svg"
+                                            alt="">Music</a>
+                                </div>
+                                <div class="dropdownContent2">
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/camera-blue.svg"
+                                            alt="">Photography</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/ball-colored.svg"
+                                            alt="">Sports</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/card-colored.svg"
+                                            alt="">Trading Cards</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/wallet-colored.svg"
+                                            alt="">Utility</a>
+                                    <a href="#"><img src="./src/images/for-all-pages/header-dropdown/camera-aqua.svg"
+                                            alt="">Virtual Worlds</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown headerDropdown ResourcesDropdown">
+                            <a class="dropdownLinks" href="#">Resources</a>
+                            <div class="dropdownContent">
+                                <a href="#">Help Center</a>
+                                <a href="#">Platform Status</a>
+                                <a href="#">Partners</a>
+                                <a href="#">Blog</a>
+                                <a href="#">Single Post</a>
+                                <a href="#">Newsletter</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Create</a></li>
+                </ul>
+            </nav>
+            <ul class="headerButtons">
+                <li>
+                    <div class="buttonDropdown">
+                        <i class="fa-solid fa-user userButton"></i>
+                        <div class="buttonDropdown-Content">
+                            <div title="Copy" class="textToCopy">
+                                <div class="textToCopyArea">0x7a86c0b064171007716bbd6af96676935799a63e</div>
+                                <img src="./src/images/for-all-pages/header-dropdown/copy-to-clipboard.svg" alt="">
+                            </div>
+                            <div class="buttonDropdown-ContentText">
+                                <span>Balance</span>
+                                <div class="buttonDropdown-Balance">
+                                    <img src="./src/images/home/hot-bids/eth.svg" alt="">
+                                    <span>10 ETH</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+                                <li><a href="#"><i class="fa-solid fa-gear"></i>Edit Profile</a></li>
+                                <li><a href="#"><i class="fa-solid fa-globe"></i>Language</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle-arrow-left"></i>Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><button title="button"><i class="fa-solid fa-moon"></i></button></li>
+                <li>
+                    <button class="burgerMenu" title="button">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </header>
@@ -164,7 +331,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/17">Art Me Outside</a>
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/17">Art Me
+                            Outside</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_1.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Wow Frens</a></p>
@@ -182,7 +350,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/18">PankySkal</a>
+                        <a class="CardBottomLink"
+                            href="https://xhibiter-reactjs.ibthemespro.com/collection/18">PankySkal</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_2.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">NFT stars</a></p>
@@ -200,7 +369,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/19">VR Space_287</a>
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/19">VR
+                            Space_287</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_3.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Origin Morish</a></p>
@@ -218,7 +388,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/20">Metasmorf</a>
+                        <a class="CardBottomLink"
+                            href="https://xhibiter-reactjs.ibthemespro.com/collection/20">Metasmorf</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_4.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Lazy Panda</a></p>
@@ -236,7 +407,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/21">3Landers</a>
+                        <a class="CardBottomLink"
+                            href="https://xhibiter-reactjs.ibthemespro.com/collection/21">3Landers</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_5.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">051_Hart</a></p>
@@ -254,7 +426,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/22">SlimHoods</a>
+                        <a class="CardBottomLink"
+                            href="https://xhibiter-reactjs.ibthemespro.com/collection/22">SlimHoods</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_6.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Crytopank</a></p>
@@ -272,7 +445,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/23">The Overseers</a>
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/23">The
+                            Overseers</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_7.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">Mrsmeseks</a></p>
@@ -290,7 +464,8 @@
                         </div>
                     </div>
                     <div class="exploreCollections-CardBottom">
-                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/24">Dope Shibas</a>
+                        <a class="CardBottomLink" href="https://xhibiter-reactjs.ibthemespro.com/collection/24">Dope
+                            Shibas</a>
                         <div class="exploreCollections-CardBottomLeft">
                             <img src="./src/images/collections/user-avatar/owner_8.png" alt="">
                             <p>by <a href="https://xhibiter-reactjs.ibthemespro.com/user/20">alyxbow</a></p>
