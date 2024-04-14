@@ -1174,7 +1174,7 @@ main #UpBanner #upBannerMobileImages {
 @media only screen and (max-width: 500px) {
   footer {
     display: flex;
-    gap: 4vh !important;
+    gap: 6vh !important;
   }
   #footerTop-Right {
     display: flex;
