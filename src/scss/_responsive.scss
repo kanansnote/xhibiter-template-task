@@ -2,6 +2,10 @@ header {
     #headerMobileContent {
         display: none;
     }
+
+    #connectWallet {
+        display: none;
+    }
 }
 
 main {
@@ -15,6 +19,7 @@ main {
 @media only screen and (max-width: 1200px) {
 
     header {
+
         #headerContent {
             display: none;
         }
@@ -27,54 +32,159 @@ main {
                 padding-left: 5vh;
             }
 
-            .headerButtons {
-                padding-right: 3vh;
+
+            #mobileFormAndInput {
+                position: absolute;
+                top: 14vh;
+                left: 4.5vh;
+                display: flex;
+                gap: 15vw;
+                background-color: #eee;
+                padding: 2vh 0 2vh 0;
+
+                .headerMobileInput {
+                    display: none;
+                }
+                    
+                .InputShow {
+                    display: block;
+        
+                    input {
+                        width: 55vw;
+                        height: auto;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 2vh;
+                        right: -8vh;
+                        width: 2vh;
+                        height: 4vh;
+                        border-right: solid 1px black;
+                    }
+                }
+    
+                #connectWallet {
+                    display: block;
+                    padding: 2vh;
+                    width: 20vw;
+                    border-radius: 2vh;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+                    background-color: #8358ff;
+                    color: white;
+                    border: none;
+                }
             }
 
             /* navMenu for mobile view */
             .navMenu {
                 display: none;
-                height: 100%;
-                position: fixed;
-                z-index: 1;
-                top: 0;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 10vh;
                 left: 0;
                 background-color: #eee;
-                overflow-x: hidden;
-                /* Disable horizontal scroll */
+                z-index: -1;
+                padding-top: 20vh;
+                padding-left: 5vh;
+                overflow: auto;
                 transition: 0.5s;
-                /* Smooth open/close effects */
-                padding-top: 15vh;
-                padding-right: 12vh;
 
                 ul {
-                    display: inline-block;
                     list-style: none;
-                    padding: 0;
-                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding-right: 4vh;
 
                     li {
-                        margin-bottom: 20px;
-                        display: block;
+                        padding: unset;
 
-                        a {
+                        .dropdownMobile {
+                            font-size: 18px !important;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
                             text-decoration: none;
                             font-size: 20px;
                             color: #818181;
-                            display: block;
                             transition: 0.3s ease-in-out;
+                            position: relative;
+                            cursor: pointer;
+
+                            img {
+                                position: absolute;
+                                right: 0;
+                            }
+
+                            .dropdownMobileLinks {
+                                color: #5a5d79;
+
+                                &:hover {
+                                    color: #8358ff;
+                                }
+                            }
+
+                            .dropdownContent {
+                                display: none;
+                            }
+
+                            .dropdownContentShow {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                height: auto;
+                                padding: 3vh;
+                                gap: 2vh;
+                            }
+
+                        }
+
+                        a {
+                            width: 100%;
+                            padding-left: 40px;
+                            padding-top: 10px;
+                            padding-bottom: 7px;
+                            position: relative;
 
                             &:hover {
-                                color: #24252a;
+                                background-color: white;
+                                border-radius: 2vh;
+                            }
+
+                            img {
+                                position: absolute;
+                                left: 10px;
+                                top: 6px;
+                            }
+                        }
+
+                        .LastMobileLink {
+                            font-size: 18px;
+                            color: #5a5d79;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: #8358ff;
                             }
                         }
                     }
                 }
             }
 
-            .show {
-                display: block !important;
+            .navMenuShow {
+                display: flex !important;
             }
+                      
+            .headerButtons {
+                padding-right: 3vh;
+            }
+
         }
     }
 

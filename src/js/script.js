@@ -1,3 +1,4 @@
+// Setting Header elements background in desktop view
 const header = document.querySelector('header');
 
 // Make headline id element disappear when scrolling down
@@ -13,7 +14,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Copy to Clipboard
+// Copy to clipboard
 
 const textToCopyArea = document.querySelector('.textToCopyArea');
 const copiedText = document.createElement('span');
@@ -36,40 +37,66 @@ textToCopyArea.addEventListener('click', () => {
 
 // Configuring Burger Menu
 
+const headerMobile = document.getElementById('headerMobileContent');
 const burgerMenu = document.querySelector('.burgerMenu');
 const navMenu = document.querySelector('.navMenu');
-const headerMobileInput = document.getElementById ('headerMobileInput');
+const headerMobileInput = document.querySelector('.headerMobileInput');
 const faBars = document.querySelector('.fa-bars');
 const faXMark = document.querySelector('.fa-circle-xmark');
+const connectWallet = document.getElementById('connectWallet');
 
-headerMobileInput.style.display = 'none';
 faXMark.style.display = 'none';
+connectWallet.style.display = 'none';
 
 // Function to open the menu
 function openMenu() {
-    navMenu.classList.add('show');
-    burgerMenu.classList.add('open');
-}
-
-// Function to close the menu
-function closeMenu() {
-    navMenu.classList.remove('show');
-    burgerMenu.classList.remove('open');
+    navMenu.classList.add('navMenuShow');
+    burgerMenu.classList.add('navMenuOpen');
+    headerMobileInput.classList.add('InputShow');
+  }
+  
+  // Function to close the menu
+  function closeMenu() {
+    navMenu.classList.remove('navMenuShow');
+    burgerMenu.classList.remove('navMenuOpen');
+    headerMobileInput.classList.remove('InputShow');
 }
 
 // Event listener for click event
 burgerMenu.addEventListener('click', function () {
-    if (burgerMenu.classList.contains('open')) {
+    if (burgerMenu.classList.contains('navMenuOpen')) {
         closeMenu();
         faBars.style.display = 'block';
-        headerMobileInput.style.display = 'none';
         faXMark.style.display = 'none';
-    } else {
+        headerMobile.style.background = 'transparent';
+        connectWallet.style.display = 'none';
+      } else {
         openMenu();
-        headerMobileInput.style.display = 'block';
         faBars.style.display = 'none';
         faXMark.style.display = 'block';
+        headerMobile.style.background = '#eee';
+        connectWallet.style.display = 'block';
     }
+});
+
+// Setting Mobile Dropdowns
+const dropdownMobileLinks = document.querySelectorAll('.dropdownMobileLinks');
+const dropdownContent = document.querySelectorAll('.dropdownContent');
+const dropdownArrow = document.querySelectorAll('.dropdownMobileLinks img'); // Assuming images are direct children
+let isRotated = false; // Keeps track of current rotation state
+
+dropdownMobileLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    const dropdownContent = this.nextElementSibling; // Get the next sibling element (dropdownContent)
+    dropdownContent.classList.toggle('dropdownContentShow'); // Toggle visibility class
+
+    // Get the arrow image within the clicked link (assuming direct child)
+    const arrowImg = this.querySelector('img'); // Target the image child
+
+    isRotated = !isRotated; // Toggle rotation state on each click
+    arrowImg.style.transform = `rotate(${isRotated ? 180 : 0}deg)`;
+    arrowImg.style.transition = '0.2s ease-in-out';
+  });
 });
 
 // Setting Section's Dropdown

@@ -17,6 +17,34 @@ ul {
   list-style-type: none;
 }
 
+.FirstNavLinkAvailable {
+  color: #131740 !important;
+}
+.FirstNavLinkAvailable:hover {
+  color: #10B981 !important;
+}
+
+.FirstNavLinkSelected {
+  color: #8358ff !important;
+}
+.FirstNavLinkSelected:hover {
+  color: #EF3D3D !important;
+}
+
+.CollectionsPageAvailable {
+  color: #131740 !important;
+}
+.CollectionsPageAvailable:hover {
+  color: #10B981 !important;
+}
+
+.CollectionsPageSelected {
+  color: #8358ff !important;
+}
+.CollectionsPageSelected:hover {
+  color: #EF3D3D !important;
+}
+
 a {
   text-decoration: none;
 }
@@ -25,6 +53,7 @@ input {
   font-family: "DM Sans", sans-serif;
 }
 
+/* Other things */
 section {
   padding: 5vh;
 }
@@ -83,37 +112,34 @@ header #headerContent a .websiteLogo, header #headerMobileContent a .websiteLogo
   -o-object-fit: contain;
      object-fit: contain;
 }
-header #headerContent form, header #headerMobileContent form {
+header #headerContent form, header #headerContent .headerMobileInput, header #headerMobileContent form, header #headerMobileContent .headerMobileInput {
   position: relative;
 }
-header #headerContent form img, header #headerMobileContent form img {
+header #headerContent form img, header #headerContent .headerMobileInput img, header #headerMobileContent form img, header #headerMobileContent .headerMobileInput img {
   position: absolute;
   top: 13px;
   left: 15px;
   width: 20px;
 }
-header #headerContent form input, header #headerMobileContent form input {
+header #headerContent form input, header #headerContent .headerMobileInput input, header #headerMobileContent form input, header #headerMobileContent .headerMobileInput input {
   width: 50vh;
   padding: 2.5vh 7vh;
   border-radius: 2.5vh;
   border: none;
   outline-color: #8358ff;
 }
-header #headerContent form input::-moz-placeholder, header #headerMobileContent form input::-moz-placeholder {
+header #headerContent form input::-moz-placeholder, header #headerContent .headerMobileInput input::-moz-placeholder, header #headerMobileContent form input::-moz-placeholder, header #headerMobileContent .headerMobileInput input::-moz-placeholder {
   font-size: 16px;
 }
-header #headerContent form input::placeholder, header #headerMobileContent form input::placeholder {
+header #headerContent form input::placeholder, header #headerContent .headerMobileInput input::placeholder, header #headerMobileContent form input::placeholder, header #headerMobileContent .headerMobileInput input::placeholder {
   font-size: 16px;
 }
 header #headerContent nav ul, header #headerMobileContent nav ul {
   display: flex;
   gap: 5vh;
 }
-header #headerContent nav ul li .FirstNavLinkAvailable, header #headerMobileContent nav ul li .FirstNavLinkAvailable {
-  color: #131740;
-}
-header #headerContent nav ul li .FirstNavLinkSelected, header #headerMobileContent nav ul li .FirstNavLinkSelected {
-  color: #8358ff;
+header #headerContent nav ul li, header #headerMobileContent nav ul li {
+  padding: 1vh;
 }
 header #headerContent nav ul li a, header #headerMobileContent nav ul li a {
   transition: 0.2s ease-in-out;
@@ -138,12 +164,6 @@ header #headerContent nav ul li .headerDropdown .dropdownContent a, header #head
 header #headerContent nav ul li .headerDropdown .dropdownContent a:hover, header #headerMobileContent nav ul li .headerDropdown .dropdownContent a:hover {
   color: #8358ff;
 }
-header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageAvailable, header #headerMobileContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageAvailable {
-  color: #131740;
-}
-header #headerContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageSelected, header #headerMobileContent nav ul li .headerDropdown .dropdownContent .dropdownContent1 .CollectionsPageSelected {
-  color: #8358ff;
-}
 header #headerContent nav ul li .headerDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent {
   display: flex;
   align-items: center;
@@ -163,20 +183,26 @@ header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent .dr
   justify-content: center;
   gap: 1vh;
 }
+header #headerContent nav ul li .headerDropdown:hover .dropdownContent a, header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent a {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
 header #headerContent nav ul li .headerDropdown:hover .dropdownContent a:hover, header #headerMobileContent nav ul li .headerDropdown:hover .dropdownContent a:hover {
   background-color: #e7e8ec;
   border-radius: 2vh;
 }
 header #headerContent nav ul li .HomeDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .HomeDropdown:hover .dropdownContent {
   width: 70vh;
-  height: 35vh;
+  height: 45vh;
 }
 header #headerContent nav ul li .PagesDropdown #CollectionsPage, header #headerMobileContent nav ul li .PagesDropdown #CollectionsPage {
   color: #131740;
 }
 header #headerContent nav ul li .PagesDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .PagesDropdown:hover .dropdownContent {
   width: 70vh;
-  height: 45vh;
+  height: 55vh;
 }
 header #headerContent nav ul li .ExploreDropdown .dropdownContent a, header #headerMobileContent nav ul li .ExploreDropdown .dropdownContent a {
   display: flex;
@@ -190,16 +216,18 @@ header #headerContent nav ul li .ExploreDropdown .dropdownContent a img, header 
   width: 15px;
 }
 header #headerContent nav ul li .ExploreDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .ExploreDropdown:hover .dropdownContent {
-  width: 70vh;
-  height: 25vh;
+  width: 75vh;
+  height: 30vh;
   padding-right: 7vh;
 }
 header #headerContent nav ul li .ResourcesDropdown:hover .dropdownContent, header #headerMobileContent nav ul li .ResourcesDropdown:hover .dropdownContent {
   display: flex;
   flex-direction: column;
-  gap: 5vh;
-  width: 30vh;
+  gap: 4vh;
+  width: 28vh;
   padding: 2vh;
+  position: absolute;
+  left: -5vh;
 }
 header #headerContent .headerButtons, header #headerMobileContent .headerButtons {
   display: flex;
@@ -904,17 +932,17 @@ footer #FooterTop #footerTop-Left img {
 footer #FooterTop #footerTop-Left p {
   width: 60%;
 }
-footer #FooterTop #footerTop-Left #socialLinks {
+footer #FooterTop #footerTop-Left .socialLinks {
   display: flex;
   gap: 5vh;
 }
-footer #FooterTop #footerTop-Left #socialLinks li a {
+footer #FooterTop #footerTop-Left .socialLinks li a {
   color: #a1a2b3;
 }
-footer #FooterTop #footerTop-Left #socialLinks li a i {
+footer #FooterTop #footerTop-Left .socialLinks li a i {
   font-size: 20px;
 }
-footer #FooterTop #footerTop-Left #socialLinks li a:hover {
+footer #FooterTop #footerTop-Left .socialLinks li a:hover {
   color: #8358ff;
 }
 footer #FooterTop #footerTop-Right {
@@ -943,6 +971,9 @@ footer #FooterBottom #footerBottomLinks {
 header #headerMobileContent {
   display: none;
 }
+header #connectWallet {
+  display: none;
+}
 
 main #UpBanner #upBannerMobileImages {
   display: none;
@@ -960,46 +991,133 @@ main #UpBanner #upBannerMobileImages {
   header #headerMobileContent .websiteLogo {
     padding-left: 5vh;
   }
-  header #headerMobileContent .headerButtons {
-    padding-right: 3vh;
+  header #headerMobileContent #mobileFormAndInput {
+    position: absolute;
+    top: 14vh;
+    left: 4.5vh;
+    display: flex;
+    gap: 15vw;
+    background-color: #eee;
+    padding: 2vh 0 2vh 0;
+  }
+  header #headerMobileContent #mobileFormAndInput .headerMobileInput {
+    display: none;
+  }
+  header #headerMobileContent #mobileFormAndInput .InputShow {
+    display: block;
+  }
+  header #headerMobileContent #mobileFormAndInput .InputShow input {
+    width: 55vw;
+    height: auto;
+  }
+  header #headerMobileContent #mobileFormAndInput .InputShow::after {
+    content: "";
+    position: absolute;
+    top: 2vh;
+    right: -8vh;
+    width: 2vh;
+    height: 4vh;
+    border-right: solid 1px black;
+  }
+  header #headerMobileContent #mobileFormAndInput #connectWallet {
+    display: block;
+    padding: 2vh;
+    width: 20vw;
+    border-radius: 2vh;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background-color: #8358ff;
+    color: white;
+    border: none;
   }
   header #headerMobileContent .navMenu {
     display: none;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 10vh;
     left: 0;
     background-color: #eee;
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
+    z-index: -1;
+    padding-top: 20vh;
+    padding-left: 5vh;
+    overflow: auto;
     transition: 0.5s;
-    /* Smooth open/close effects */
-    padding-top: 15vh;
-    padding-right: 12vh;
   }
   header #headerMobileContent .navMenu ul {
-    display: inline-block;
     list-style: none;
-    padding: 0;
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 4vh;
   }
   header #headerMobileContent .navMenu ul li {
-    margin-bottom: 20px;
-    display: block;
+    padding: unset;
   }
-  header #headerMobileContent .navMenu ul li a {
+  header #headerMobileContent .navMenu ul li .dropdownMobile {
+    font-size: 18px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
     font-size: 20px;
     color: #818181;
-    display: block;
     transition: 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+  }
+  header #headerMobileContent .navMenu ul li .dropdownMobile img {
+    position: absolute;
+    right: 0;
+  }
+  header #headerMobileContent .navMenu ul li .dropdownMobile .dropdownMobileLinks {
+    color: #5a5d79;
+  }
+  header #headerMobileContent .navMenu ul li .dropdownMobile .dropdownMobileLinks:hover {
+    color: #8358ff;
+  }
+  header #headerMobileContent .navMenu ul li .dropdownMobile .dropdownContent {
+    display: none;
+  }
+  header #headerMobileContent .navMenu ul li .dropdownMobile .dropdownContentShow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 3vh;
+    gap: 2vh;
+  }
+  header #headerMobileContent .navMenu ul li a {
+    width: 100%;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    position: relative;
   }
   header #headerMobileContent .navMenu ul li a:hover {
-    color: #24252a;
+    background-color: white;
+    border-radius: 2vh;
   }
-  header #headerMobileContent .show {
-    display: block !important;
+  header #headerMobileContent .navMenu ul li a img {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+  }
+  header #headerMobileContent .navMenu ul li .LastMobileLink {
+    font-size: 18px;
+    color: #5a5d79;
+    cursor: pointer;
+  }
+  header #headerMobileContent .navMenu ul li .LastMobileLink:hover {
+    color: #8358ff;
+  }
+  header #headerMobileContent .navMenuShow {
+    display: flex !important;
+  }
+  header #headerMobileContent .headerButtons {
+    padding-right: 3vh;
   }
   main section,
   main #createAndSellYourNFTs-Cards {

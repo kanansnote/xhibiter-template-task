@@ -21,7 +21,7 @@ header {
             }
         }
 
-        form {
+        form, .headerMobileInput {
             position: relative;
 
             img {
@@ -50,14 +50,7 @@ header {
                 gap: 5vh;
 
                 li {
-
-                    .FirstNavLinkAvailable {
-                        color: #131740;
-                    }
-
-                    .FirstNavLinkSelected {
-                        color: #8358ff;
-                    }
+                    padding: 1vh;
 
                     a {
                         transition: 0.2s ease-in-out;
@@ -87,15 +80,6 @@ header {
                                 }
                             }
 
-                            .dropdownContent1 {
-                                .CollectionsPageAvailable {
-                                    color: #131740;
-                                }
-
-                                .CollectionsPageSelected {
-                                    color: #8358ff;
-                                }
-                            }
                         }
 
                         &:hover {
@@ -119,9 +103,16 @@ header {
                                     gap: 1vh;
                                 }
 
-                                a:hover {
-                                    background-color: #e7e8ec;
-                                    border-radius: 2vh;
+                                a {
+                                    padding-left: 20px;
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                    font-size: 15px;
+
+                                    &:hover {
+                                        background-color: #e7e8ec;
+                                        border-radius: 2vh;
+                                    }
                                 }
                             }
                         }
@@ -133,7 +124,7 @@ header {
 
                             .dropdownContent {
                                 width: 70vh;
-                                height: 35vh;
+                                height: 45vh;
                             }
                         }
                     }
@@ -148,7 +139,7 @@ header {
 
                             .dropdownContent {
                                 width: 70vh;
-                                height: 45vh;
+                                height: 55vh;
                             }
                         }
                     }
@@ -173,8 +164,8 @@ header {
 
                         &:hover {
                             .dropdownContent {
-                                width: 70vh;
-                                height: 25vh;
+                                width: 75vh;
+                                height: 30vh;
                                 padding-right: 7vh;
                             }
                         }
@@ -186,9 +177,11 @@ header {
                             .dropdownContent {
                                 display: flex;
                                 flex-direction: column;
-                                gap: 5vh;
-                                width: 30vh;
+                                gap: 4vh;
+                                width: 28vh;
                                 padding: 2vh;
+                                position: absolute;
+                                left: -5vh;
                             }
                         }
                     }

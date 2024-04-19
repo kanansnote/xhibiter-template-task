@@ -25,6 +25,38 @@ ul {
     list-style-type: none;
 }
 
+.FirstNavLinkAvailable {
+    color: #131740 !important;
+
+    &:hover {
+        color: #10B981 !important
+    }
+}
+
+.FirstNavLinkSelected {
+    color: #8358ff !important;
+
+    &:hover {
+        color: #EF3D3D !important;
+    }
+}
+
+.CollectionsPageAvailable {
+    color: #131740 !important;
+
+    &:hover {
+        color: #10B981 !important
+    }
+}
+
+.CollectionsPageSelected {
+    color: #8358ff !important;
+    
+    &:hover {
+        color: #EF3D3D !important;
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -32,6 +64,8 @@ a {
 input {
     font-family: "DM Sans", sans-serif;
 }
+
+/* Other things */
 
 section {
     padding: 5vh;
