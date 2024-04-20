@@ -261,9 +261,9 @@ header #headerContent .headerButtons li .buttonDropdown:hover .buttonDropdown-Co
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
-  top: 12vh;
-  right: 10vh;
+  position: relative;
+  top: 3vh;
+  right: 15vh;
   background-color: white;
   width: 38vh;
   height: 40.9vh;
@@ -985,64 +985,44 @@ main #UpBanner #upBannerMobileImages {
   }
   header #headerMobileContent {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: unset;
+    padding-top: 1vh;
+    width: 100%;
+    height: 100vh;
     /* navMenu for mobile view */
   }
-  header #headerMobileContent .websiteLogo {
-    padding-left: 5vh;
-  }
-  header #headerMobileContent #mobileFormAndInput {
-    position: absolute;
-    top: 14vh;
-    left: 4.5vh;
+  header #headerMobileContent #headerMobileTop {
     display: flex;
-    gap: 15vw;
-    background-color: #eee;
-    padding: 2vh 0 2vh 0;
+    justify-content: space-between;
+    padding-left: 4vh;
+    padding-right: 4vh;
   }
-  header #headerMobileContent #mobileFormAndInput .headerMobileInput {
+  header #headerMobileContent .headerMobileInput {
     display: none;
   }
-  header #headerMobileContent #mobileFormAndInput .InputShow {
+  header #headerMobileContent .InputShow {
     display: block;
+    padding-left: 4vh;
+    position: relative;
   }
-  header #headerMobileContent #mobileFormAndInput .InputShow input {
-    width: 55vw;
-    height: auto;
-  }
-  header #headerMobileContent #mobileFormAndInput .InputShow::after {
-    content: "";
+  header #headerMobileContent .InputShow img {
     position: absolute;
-    top: 2vh;
-    right: -8vh;
-    width: 2vh;
-    height: 4vh;
-    border-right: solid 1px black;
+    left: 6vh;
   }
-  header #headerMobileContent #mobileFormAndInput #connectWallet {
-    display: block;
-    padding: 2vh;
-    width: 20vw;
-    border-radius: 2vh;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    background-color: #8358ff;
-    color: white;
-    border: none;
+  header #headerMobileContent .InputShow input {
+    width: 92vw;
+    height: auto;
   }
   header #headerMobileContent .navMenu {
     display: none;
+    position: relative;
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 10vh;
+    top: 0;
     left: 0;
     background-color: #eee;
-    z-index: -1;
-    padding-top: 20vh;
+    z-index: 1;
     padding-left: 5vh;
-    overflow: auto;
     transition: 0.5s;
   }
   header #headerMobileContent .navMenu ul {
@@ -1116,8 +1096,48 @@ main #UpBanner #upBannerMobileImages {
   header #headerMobileContent .navMenuShow {
     display: flex !important;
   }
-  header #headerMobileContent .headerButtons {
-    padding-right: 3vh;
+  header #headerMobileContent #headerMobileBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+  header #headerMobileContent #headerMobileBottom #connectWallet {
+    padding: 2vh;
+    width: 89vw;
+    border-radius: 2vh;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    background-color: #8358ff;
+    color: white;
+    border: none;
+    position: relative;
+    margin-left: 5vh !important;
+  }
+  header #headerMobileContent #headerMobileBottom #connectWallet:hover {
+    background-color: #7444ff;
+  }
+  header #headerMobileContent #headerMobileBottom #connectWallet::after {
+    content: "";
+    border-bottom: solid 1px #5a5d79;
+    position: absolute;
+    top: 9vh;
+    left: 10vw;
+    width: 70vw;
+  }
+  header #headerMobileContent #headerMobileBottom .headerSocialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 5vh;
+  }
+  header #headerMobileContent #headerMobileBottom .headerSocialLinks li a {
+    color: #a1a2b3;
+  }
+  header #headerMobileContent #headerMobileBottom .headerSocialLinks li a i {
+    font-size: 20px;
+  }
+  header #headerMobileContent #headerMobileBottom .headerSocialLinks li a:hover {
+    color: #8358ff;
   }
   main section,
   main #createAndSellYourNFTs-Cards {
@@ -1170,7 +1190,7 @@ main #UpBanner #upBannerMobileImages {
     display: flex;
   }
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1200px) and (max-width: 920px) {
   section {
     padding: 5vh 0 0 0;
   }
@@ -1242,14 +1262,18 @@ main #UpBanner #upBannerMobileImages {
   footer {
     padding: 5vh 0 5vh 0;
   }
-  #FooterTop, #footerTop-Left, #FooterBottom {
+  #FooterTop,
+  #footerTop-Left,
+  #FooterBottom {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
   }
-  #FooterTop p, #footerTop-Left p, #FooterBottom p {
+  #FooterTop p,
+  #footerTop-Left p,
+  #FooterBottom p {
     width: 90% !important;
   }
   .infoLinks1 {
@@ -1271,7 +1295,7 @@ main #UpBanner #upBannerMobileImages {
     gap: 3vh;
   }
 }
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 1200px) and (max-width: 660px) {
   #TopCollections .sectionHeader {
     display: flex;
     flex-direction: column;
@@ -1289,7 +1313,7 @@ main #UpBanner #upBannerMobileImages {
     width: 50vh !important;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1200px) and (max-width: 500px) {
   footer {
     display: flex;
     gap: 6vh !important;

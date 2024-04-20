@@ -26,72 +26,56 @@ main {
 
         #headerMobileContent {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: unset;
+            padding-top: 1vh;
+            width: 100%;
+            height: 100vh;
 
-            .websiteLogo {
-                padding-left: 5vh;
+            #headerMobileTop {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 4vh;
+                padding-right: 4vh;
+
+                .websiteLogo {
+                }
+
+                .headerButtons {
+                }
+
             }
 
+            .headerMobileInput {
+                display: none;
+            }
 
-            #mobileFormAndInput {
-                position: absolute;
-                top: 14vh;
-                left: 4.5vh;
-                display: flex;
-                gap: 15vw;
-                background-color: #eee;
-                padding: 2vh 0 2vh 0;
+            .InputShow {
+                display: block;
+                padding-left: 4vh;
+                position: relative;
 
-                .headerMobileInput {
-                    display: none;
+                img {
+                    position: absolute;
+                    left: 6vh;
                 }
-                    
-                .InputShow {
-                    display: block;
-        
-                    input {
-                        width: 55vw;
-                        height: auto;
-                    }
 
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 2vh;
-                        right: -8vh;
-                        width: 2vh;
-                        height: 4vh;
-                        border-right: solid 1px black;
-                    }
-                }
-    
-                #connectWallet {
-                    display: block;
-                    padding: 2vh;
-                    width: 20vw;
-                    border-radius: 2vh;
-                    text-align: center;
-                    cursor: pointer;
-                    transition: 0.2s ease-in-out;
-                    background-color: #8358ff;
-                    color: white;
-                    border: none;
+                input {
+                    width: 92vw;
+                    height: auto;
                 }
             }
 
             /* navMenu for mobile view */
             .navMenu {
                 display: none;
+                position: relative;
                 width: 100%;
-                height: 100vh;
-                position: absolute;
-                top: 10vh;
+                top: 0;
                 left: 0;
                 background-color: #eee;
-                z-index: -1;
-                padding-top: 20vh;
+                z-index: 1;
                 padding-left: 5vh;
-                overflow: auto;
                 transition: 0.5s;
 
                 ul {
@@ -180,11 +164,60 @@ main {
             .navMenuShow {
                 display: flex !important;
             }
-                      
-            .headerButtons {
-                padding-right: 3vh;
-            }
 
+            #headerMobileBottom {
+                display: flex;
+                flex-direction: column;
+                gap: 5vh;
+
+                #connectWallet {
+                    padding: 2vh;
+                    width: 89vw;
+                    border-radius: 2vh;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: 0.1s ease-in-out;
+                    background-color: #8358ff;
+                    color: white;
+                    border: none;
+                    position: relative;
+                    margin-left: 5vh !important;
+
+                    &:hover {
+                        background-color: #7444ff;
+                    }
+
+                    &::after {
+                        content: "";
+                        border-bottom: solid 1px #5a5d79;
+                        position: absolute;
+                        top: 9vh;
+                        left: 10vw;
+                        width: 70vw;
+                    }
+                }
+
+                .headerSocialLinks {
+                    display: flex;
+                    justify-content: center;
+                    gap: 5vh;
+    
+                    li {
+    
+                        a {
+                            color: #a1a2b3;
+    
+                            i {
+                                font-size: 20px;
+                            }
+    
+                            &:hover {
+                                color: #8358ff;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -262,176 +295,178 @@ main {
     footer {
         display: flex;
     }
-}
 
-@media only screen and (max-width: 920px) {
+    @media only screen and (max-width: 920px) {
 
-    section {
-        padding: 5vh 0 0 0;
-    }
+        section {
+            padding: 5vh 0 0 0;
+        }
 
-    #UpBanner {
-        display: flex;
-        flex-direction: column;
+        #UpBanner {
+            display: flex;
+            flex-direction: column;
 
-        #upBanner-Main {
+            #upBanner-Main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                margin-top: -10vh !important;
+
+                h1,
+                p {
+                    width: 90% !important;
+                }
+            }
+
+            #upBannerImages {
+                display: none;
+            }
+
+            #upBannerMobileImages {
+                display: flex !important;
+                align-items: center;
+                position: relative;
+                margin-bottom: 10vh;
+
+                img {
+                    top: 5vh;
+
+                    &:nth-child(1) {
+                        position: relative;
+                        top: 18vh;
+                        left: 10vh;
+                        width: 80%;
+                        z-index: 1;
+                    }
+
+                    &:nth-child(2) {
+                        position: absolute;
+                        top: 15%;
+                        left: 15%;
+                        transform: rotate(10deg);
+                        border-radius: 20vh;
+                        width: 70%;
+                        z-index: -1;
+                    }
+                }
+
+                .up-down-animation {
+                    animation-name: up-down;
+                    animation-duration: 7s;
+                    /* Adjust duration for animation speed */
+                    animation-iteration-count: infinite;
+                    /* Loop animation forever */
+                }
+
+                @keyframes up-down {
+                    0% {
+                        transform: translateY(0);
+                    }
+
+                    /* Start at original position */
+                    50% {
+                        transform: translateY(-50px);
+                    }
+
+                    /* Move image down */
+                    100% {
+                        transform: translateY(0);
+                    }
+
+                    /* Move image back up (loop) */
+                }
+            }
+        }
+
+
+        footer {
+            padding: 5vh 0 5vh 0;
+        }
+
+        #FooterTop,
+        #footerTop-Left,
+        #FooterBottom {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             text-align: center;
-            width: 100%;
-            margin-top: -10vh !important;
 
-            h1,
             p {
                 width: 90% !important;
             }
         }
 
-        #upBannerImages {
-            display: none;
-        }
-
-        #upBannerMobileImages {
-            display: flex !important;
-            align-items: center;
-            position: relative;
-            margin-bottom: 10vh;
-
-            img {
-                top: 5vh;
-
-                &:nth-child(1) {
-                    position: relative;
-                    top: 18vh;
-                    left: 10vh;
-                    width: 80%;
-                    z-index: 1;
-                }
-
-                &:nth-child(2) {
-                    position: absolute;
-                    top: 15%;
-                    left: 15%;
-                    transform: rotate(10deg);
-                    border-radius: 20vh;
-                    width: 70%;
-                    z-index: -1;
-                }
-            }
-
-            .up-down-animation {
-                animation-name: up-down;
-                animation-duration: 7s;
-                /* Adjust duration for animation speed */
-                animation-iteration-count: infinite;
-                /* Loop animation forever */
-            }
-
-            @keyframes up-down {
-                0% {
-                    transform: translateY(0);
-                }
-
-                /* Start at original position */
-                50% {
-                    transform: translateY(-50px);
-                }
-
-                /* Move image down */
-                100% {
-                    transform: translateY(0);
-                }
-
-                /* Move image back up (loop) */
-            }
-        }
-    }
-
-
-    footer {
-        padding: 5vh 0 5vh 0;
-    }
-
-    #FooterTop, #footerTop-Left, #FooterBottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-
-        p {
-            width: 90% !important;
-        }
-    }
-
-    .infoLinks1 {
-        display: flex;
-        gap: 1vh;
-    }
-
-    .infoLinks2 {
-        display: flex;
-        gap: 2vh;
-    }
-
-    .infoLinks3 {
-        display: flex;
-        gap: 3.8vh;
-    }
-
-    #FooterTop {
-        gap: 5vh;
-    }
-
-    #FooterBottom {
-        gap: 3vh;
-    }
-}
-
-@media only screen and (max-width: 660px) {
-
-    #TopCollections {
-
-        .sectionHeader {
+        .infoLinks1 {
             display: flex;
-            flex-direction: column;
+            gap: 1vh;
+        }
+
+        .infoLinks2 {
+            display: flex;
+            gap: 2vh;
+        }
+
+        .infoLinks3 {
+            display: flex;
+            gap: 3.8vh;
+        }
+
+        #FooterTop {
+            gap: 5vh;
+        }
+
+        #FooterBottom {
             gap: 3vh;
         }
     }
 
-    #createAndSellYourNFTs-Cards {
-        display: flex !important;
-        flex-direction: column;
-        width: 100%;
-    }
+    @media only screen and (max-width: 660px) {
 
-    #createAndSellYourNFTs-Bottom {
+        #TopCollections {
 
-        p {
-            font-size: 16px !important;
-        }
-
-        form {
-            input {
-                width: 50vh !important;
+            .sectionHeader {
+                display: flex;
+                flex-direction: column;
+                gap: 3vh;
             }
         }
 
-    }
-}
+        #createAndSellYourNFTs-Cards {
+            display: flex !important;
+            flex-direction: column;
+            width: 100%;
+        }
 
-@media only screen and (max-width: 500px) {
-    
-    footer {
-        display: flex;
-        gap: 6vh !important;
+        #createAndSellYourNFTs-Bottom {
+
+            p {
+                font-size: 16px !important;
+            }
+
+            form {
+                input {
+                    width: 50vh !important;
+                }
+            }
+
+        }
     }
 
-    #footerTop-Right {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 7vh !important;
+    @media only screen and (max-width: 500px) {
+
+        footer {
+            display: flex;
+            gap: 6vh !important;
+        }
+
+        #footerTop-Right {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 7vh !important;
+        }
     }
 }

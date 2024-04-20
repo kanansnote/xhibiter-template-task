@@ -1,6 +1,3 @@
-// Setting Header elements background in desktop view
-const header = document.querySelector('header');
-
 // Make headline id element disappear when scrolling down
 window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY;
@@ -44,9 +41,16 @@ const headerMobileInput = document.querySelector('.headerMobileInput');
 const faBars = document.querySelector('.fa-bars');
 const faXMark = document.querySelector('.fa-circle-xmark');
 const connectWallet = document.getElementById('connectWallet');
+const headerSocialLinks = document.querySelector('.headerSocialLinks');
 
+const main = document.querySelector('main');
+const footer = document.querySelector('footer');
+const headerMobileTop = document.getElementById('headerMobileTop');
+
+headerMobileTop.style.height = '80vh';
 faXMark.style.display = 'none';
 connectWallet.style.display = 'none';
+headerSocialLinks.style.display = 'none';
 
 // Function to open the menu
 function openMenu() {
@@ -68,14 +72,31 @@ burgerMenu.addEventListener('click', function () {
         closeMenu();
         faBars.style.display = 'block';
         faXMark.style.display = 'none';
+
         headerMobile.style.background = 'transparent';
+        headerMobileTop.style.height = '80vh';
+        
         connectWallet.style.display = 'none';
+
+        main.style.display = 'block';
+        footer.style.display = 'flex';
+
+        headerSocialLinks.style.display = 'none';
+
       } else {
         openMenu();
         faBars.style.display = 'none';
         faXMark.style.display = 'block';
+        
         headerMobile.style.background = '#eee';
+        headerMobileTop.style.height = 'unset';
+
         connectWallet.style.display = 'block';
+
+        main.style.display = 'none';
+        footer.style.display = 'none';
+
+        headerSocialLinks.style.display = 'flex';
     }
 });
 
@@ -117,7 +138,7 @@ if (selectForm) {
 }
 
 document.addEventListener('click', function(event) {
-    if (!event.target.matches('#topCollectionsForm') && !selectDropdown.contains(event.target)) {
+    if (selectDropdown && !selectDropdown.contains(event.target)) {
       isOpen = false;
       selectDropdown.classList.remove('show');
       selectArrowElement.style.transform = 'rotate(0deg)';
